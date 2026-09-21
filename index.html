@@ -394,10 +394,13 @@
 
             </p>
 
-            <a href="#">
+            <a href="#"
+               onclick="openCaseStudy('case-study-sap.html'); return false;">
+            
                 View Case Study →
+            
             </a>
-
+            
         </div>
 
 
@@ -729,7 +732,32 @@
 
 </footer>
 
+<!-- =====================================================
+     CASE STUDY MODAL
+===================================================== -->
 
+<div id="caseModal" class="case-modal">
+
+    <div class="case-modal-box">
+
+        <button
+            class="case-close"
+            onclick="closeCaseStudy()"
+            aria-label="Close case study">
+
+            ×
+
+        </button>
+
+        <div id="caseStudyContent">
+
+            <!-- Case study HTML will load here -->
+
+        </div>
+
+    </div>
+
+</div>
 </body>
 
 </html>
