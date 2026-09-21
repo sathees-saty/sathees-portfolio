@@ -715,3 +715,360 @@ footer p {
     }
 
 }
+/* =====================================================
+   CASE STUDY MODAL
+===================================================== */
+
+.case-modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 5000;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(15, 23, 42, 0.62);
+
+    backdrop-filter: blur(5px);
+
+    padding: 35px 20px;
+
+    overflow-y: auto;
+}
+
+
+/* Show modal */
+
+.case-modal.active {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* Popup window */
+
+.case-modal-box {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 880px;
+
+    max-height: 90vh;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    overflow-y: auto;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.25);
+
+    animation: caseModalOpen 0.25s ease;
+}
+
+
+/* Animation */
+
+@keyframes caseModalOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* Close button */
+
+.case-close {
+
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: 1px solid #dbe4e8;
+
+    background: #ffffff;
+
+    font-size: 25px;
+
+    color: #526078;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.2s;
+}
+
+.case-close:hover {
+
+    background: #eef8f6;
+
+    color: #07857d;
+
+}
+
+
+/* Case study content */
+
+.case-study-content {
+
+    padding: 42px 45px 45px;
+}
+
+
+/* Case study tag */
+
+.case-study-tag {
+
+    display: inline-block;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    background: #d8faf4;
+
+    color: #07857d;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+
+/* Title */
+
+.case-study-content h1 {
+
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    color: #101827;
+
+    margin-bottom: 12px;
+}
+
+
+/* Section headings */
+
+.case-study-content h2 {
+
+    font-size: 21px;
+
+    margin-top: 28px;
+
+    margin-bottom: 14px;
+
+    color: #111827;
+}
+
+
+/* Metadata */
+
+.case-meta {
+
+    margin: 10px 0;
+
+    color: #47617c;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+/* Challenge */
+
+.challenge-box {
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #f7fafc;
+
+    border-left: 4px solid #101827;
+
+    border-radius: 12px;
+}
+
+.challenge-box h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+
+    color: #101827;
+}
+
+.challenge-box p {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #47617c;
+}
+
+
+/* Approach list */
+
+.case-list {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 10px 0 25px;
+}
+
+.case-list li {
+
+    position: relative;
+
+    padding-left: 25px;
+
+    margin-bottom: 15px;
+
+    color: #47617c;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.case-list li::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    color: #07857d;
+
+    font-weight: 900;
+
+    font-size: 17px;
+}
+
+
+/* Impact */
+
+.impact-box {
+
+    margin-top: 28px;
+
+    padding: 24px;
+
+    border: 1px solid #b8e2dc;
+
+    background: #effcf9;
+
+    border-radius: 12px;
+}
+
+.impact-title {
+
+    color: #07857d;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.impact-box strong {
+
+    font-size: 15px;
+
+    color: #111827;
+}
+
+
+/* Takeaway */
+
+.case-takeaway {
+
+    margin-top: 27px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #dbe4e8;
+
+    color: #61738b;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .case-modal {
+
+        padding: 15px;
+    }
+
+    .case-modal-box {
+
+        max-height: 94vh;
+
+        border-radius: 18px;
+    }
+
+    .case-study-content {
+
+        padding: 35px 24px 30px;
+    }
+
+    .case-study-content h1 {
+
+        font-size: 26px;
+
+        padding-right: 35px;
+    }
+
+    .case-close {
+
+        right: 12px;
+        top: 10px;
+    }
+
+}
