@@ -1072,3 +1072,56 @@ footer p {
     }
 
 }
+
+/* =====================================================
+   SAP ARCHITECTURE IMAGE
+===================================================== */
+
+.architecture-description {
+    color: #47617c;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+.architecture-image-container {
+    width: 100%;
+    margin: 25px 0 35px;
+
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border: 1px solid #dce7eb;
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+
+.architecture-image {
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+
+    border-radius: 8px;
+
+    cursor: zoom-in;
+}
+
+
+.image-caption {
+    margin-top: 12px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #61738b;
+}
