@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Core Banking, Payments &amp; AML Integration | Case Study</title>
+</head>
+<body>
+<div class="case-study-content">
+
+<div class="case-study-tag">Selected Transformation Program</div>
+<h1>Core Banking, Payments &amp; AML Integration</h1>
+
+<div class="case-meta">🏦 Domain: Banking / Financial Services</div>
+<div class="case-meta">💼 Role: Program / Project Manager</div>
+<div class="case-meta">🔄 Transformation: Legacy Integration → API &amp; Microservices</div>
+<div class="case-meta">💳 Scope: Core Banking, Payments &amp; AML</div>
+<div class="case-meta">🧩 Architecture: Microservices / API-led Integration</div>
+
+<div class="challenge-box">
+<h3>Business Challenge</h3>
+<p>
+The banking environment required reliable integration between Core Banking,
+payment channels and Anti-Money Laundering (AML) services. Legacy point-to-point
+interfaces created tight coupling, increased dependencies and made it difficult
+to introduce new payment capabilities or evolve compliance services independently.
+</p>
+<p>
+The modernization program introduced API-led, microservices-based integration
+to decouple banking capabilities, enable reusable services, improve transaction
+visibility and support scalable, secure and resilient processing.
+</p>
+</div>
+
+<h2>Program Scope</h2>
+<ul class="case-list">
+<li>Integrate Core Banking with payment channels and payment processing services.</li>
+<li>Integrate payment transactions with AML screening and monitoring services.</li>
+<li>Decompose selected integration capabilities into independently deployable microservices.</li>
+<li>Establish API-led integration and standardized API contracts.</li>
+<li>Implement transaction validation, routing and orchestration.</li>
+<li>Implement synchronous and asynchronous integration patterns.</li>
+<li>Establish transaction status, exception and reconciliation processing.</li>
+<li>Implement authentication, authorization, audit and security controls.</li>
+<li>Establish monitoring, logging and operational support.</li>
+<li>Manage deployment, Go-Live, Hypercare and continuous improvement.</li>
+</ul>
+
+<h2>Business Objectives</h2>
+<ul class="case-list">
+<li>Enable scalable integration between Core Banking, Payments and AML.</li>
+<li>Reduce dependency on tightly coupled legacy interfaces.</li>
+<li>Improve payment transaction processing and visibility.</li>
+<li>Enable reusable APIs and microservices.</li>
+<li>Improve AML screening integration and transaction traceability.</li>
+<li>Improve resilience, fault isolation and operational recovery.</li>
+<li>Accelerate delivery of new payment and compliance capabilities.</li>
+</ul>
+
+<h2>Core Banking Integration Architecture</h2>
+<p class="architecture-description">
+The target architecture uses API-led integration and domain-oriented
+microservices to connect Core Banking, payment channels, payment processing,
+AML screening and enterprise services with controlled transaction flow,
+security, observability and resilience.
+</p>
+
+<div class="architecture-image-container">
+<img src="core_bank_integration.png"
+     alt="Core Banking Payments and AML Microservices Integration Architecture"
+     class="architecture-image">
+<div class="image-caption">Core Banking – Payments &amp; AML Microservices Integration</div>
+</div>
+
+<h2>Architecture Components</h2>
+<ul class="case-list">
+<li><strong>Core Banking:</strong> Customer accounts, balances, transaction posting and account services.</li>
+<li><strong>Payment Channels:</strong> Mobile, internet banking, branch, ATM and digital channels.</li>
+<li><strong>Payment Service:</strong> Payment initiation, validation, routing and orchestration.</li>
+<li><strong>AML Screening Service:</strong> Transaction screening, risk evaluation, alerts and compliance workflow integration.</li>
+<li><strong>Customer / Account Service:</strong> Customer and account information required for validation.</li>
+<li><strong>API Gateway:</strong> Secure API exposure, authentication, routing, throttling and traffic management.</li>
+<li><strong>Integration Services:</strong> Transformation, orchestration, routing and system connectivity.</li>
+<li><strong>Message Broker:</strong> Asynchronous processing, event distribution and system decoupling.</li>
+<li><strong>Transaction Data:</strong> Service-specific transaction state, audit and processing information.</li>
+<li><strong>Observability:</strong> Centralized logging, monitoring, tracing, alerting and operational dashboards.</li>
+</ul>
+
+<h2>End-to-End Payment &amp; AML Transaction Flow</h2>
+
+<h3>01 — Payment Initiation</h3>
+<ul class="case-list">
+<li>Customer initiates a payment through a banking channel.</li>
+<li>Request is authenticated and validated.</li>
+<li>Payment request is submitted through the API layer.</li>
+</ul>
+
+<h3>02 — Payment Validation</h3>
+<ul class="case-list">
+<li>Validate customer and account information.</li>
+<li>Validate available balance, transaction limits and mandatory payment information.</li>
+<li>Apply transaction business rules.</li>
+</ul>
+
+<h3>03 — AML Screening</h3>
+<ul class="case-list">
+<li>Send relevant transaction information to AML screening.</li>
+<li>Perform applicable sanctions, watchlist and transaction-risk checks.</li>
+<li>Receive screening response and risk outcome.</li>
+<li>Route transactions requiring additional review according to configured compliance workflows.</li>
+</ul>
+
+<h3>04 — Core Banking Processing</h3>
+<ul class="case-list">
+<li>Approved transactions are submitted to Core Banking.</li>
+<li>Account balances and transaction records are updated.</li>
+<li>Core Banking transaction status is returned to the integration layer.</li>
+</ul>
+
+<h3>05 — Payment Completion</h3>
+<ul class="case-list">
+<li>Payment status is propagated to the originating channel.</li>
+<li>Customer receives the applicable transaction status.</li>
+<li>Transaction events are recorded for audit and operational monitoring.</li>
+</ul>
+
+<h2>Microservices Decomposition</h2>
+<ul class="case-list">
+<li>Customer Service</li>
+<li>Account Service</li>
+<li>Payment Initiation Service</li>
+<li>Payment Validation Service</li>
+<li>Payment Routing Service</li>
+<li>AML Screening Integration Service</li>
+<li>Transaction Status Service</li>
+<li>Notification Service</li>
+<li>Reconciliation Service</li>
+<li>Audit / Transaction History Service</li>
+</ul>
+
+<h2>API &amp; Integration Strategy</h2>
+<ul class="case-list">
+<li>REST APIs for synchronous business interactions.</li>
+<li>Event-driven messaging for asynchronous processing.</li>
+<li>API Gateway for controlled API access.</li>
+<li>Standardized API contracts and versioning.</li>
+<li>Centralized authentication and authorization.</li>
+<li>Correlation IDs for end-to-end transaction tracing.</li>
+<li>Idempotency controls for payment transaction processing.</li>
+<li>Retry, timeout and circuit-breaker patterns for resilience.</li>
+</ul>
+
+<h2>AML Integration &amp; Compliance Flow</h2>
+<ul class="case-list">
+<li>Identify transactions requiring AML screening.</li>
+<li>Transform transaction data into the AML service contract.</li>
+<li>Submit transactions for screening.</li>
+<li>Receive screening result and risk response.</li>
+<li>Route approved transactions for further processing.</li>
+<li>Route transactions requiring investigation according to compliance workflows.</li>
+<li>Maintain transaction and screening audit information.</li>
+<li>Monitor screening failures and integration exceptions.</li>
+</ul>
+
+<h2>Resilience &amp; Exception Management</h2>
+<ul class="case-list">
+<li>Timeout and retry management.</li>
+<li>Circuit-breaker and fault-isolation patterns.</li>
+<li>Duplicate transaction prevention.</li>
+<li>Failed-message handling and controlled reprocessing.</li>
+<li>Transaction reconciliation between Core Banking and payment services.</li>
+<li>AML response timeout and exception handling.</li>
+<li>End-to-end transaction correlation and traceability.</li>
+</ul>
+
+<h2>Security &amp; Governance</h2>
+<ul class="case-list">
+<li>API authentication and authorization.</li>
+<li>Encryption for data in transit and appropriate protection for sensitive data.</li>
+<li>Role-based access controls.</li>
+<li>Secure secrets and credential management.</li>
+<li>Transaction audit logging.</li>
+<li>API and service-level security controls.</li>
+<li>Controlled access to customer and transaction information.</li>
+<li>Security, architecture and compliance review checkpoints.</li>
+</ul>
+
+<h2>Integration Lifecycle</h2>
+
+<h3>01 — Discovery &amp; Assessment</h3>
+<ul class="case-list">
+<li>Inventory existing Core Banking, Payments and AML interfaces.</li>
+<li>Identify point-to-point dependencies and integration pain points.</li>
+<li>Assess transaction volumes, performance and availability requirements.</li>
+</ul>
+
+<h3>02 — Architecture &amp; Design</h3>
+<ul class="case-list">
+<li>Define microservices boundaries and API contracts.</li>
+<li>Define synchronous and asynchronous integration patterns.</li>
+<li>Define security, resilience and observability architecture.</li>
+</ul>
+
+<h3>03 — Build &amp; Integration</h3>
+<ul class="case-list">
+<li>Develop microservices and APIs.</li>
+<li>Implement Core Banking and AML integrations.</li>
+<li>Configure messaging, routing and transaction orchestration.</li>
+</ul>
+
+<h3>04 — Testing &amp; Validation</h3>
+<ul class="case-list">
+<li>API and service testing.</li>
+<li>End-to-end payment transaction testing.</li>
+<li>AML screening and exception testing.</li>
+<li>Performance, resilience and security testing.</li>
+</ul>
+
+<h3>05 — Deployment &amp; Go-Live</h3>
+<ul class="case-list">
+<li>Execute production deployment and cut-over.</li>
+<li>Validate critical payment and AML transaction flows.</li>
+<li>Establish production monitoring and support.</li>
+</ul>
+
+<h3>06 — Hypercare &amp; Continuous Improvement</h3>
+<ul class="case-list">
+<li>Monitor transaction health and service performance.</li>
+<li>Resolve production issues and integration exceptions.</li>
+<li>Optimize performance, reliability and scalability.</li>
+<li>Extend reusable microservices for future banking capabilities.</li>
+</ul>
+
+<h2>Program Manager – Roles &amp; Responsibilities</h2>
+<ul class="case-list">
+<li><strong>Program Strategy:</strong> Define integration modernization roadmap, scope, milestones and business outcomes.</li>
+<li><strong>Architecture Governance:</strong> Coordinate decisions across Core Banking, Payments, AML, APIs, microservices and integration platforms.</li>
+<li><strong>Stakeholder Management:</strong> Coordinate business, banking operations, architecture, engineering, security, risk, compliance and vendor teams.</li>
+<li><strong>Dependency Management:</strong> Manage dependencies between Core Banking, payment channels, AML services and enterprise systems.</li>
+<li><strong>Delivery Management:</strong> Govern development, testing, deployment and production transition.</li>
+<li><strong>Risk Management:</strong> Manage transaction, security, compliance, performance and operational risks.</li>
+<li><strong>Release Management:</strong> Coordinate release planning, cut-over, Go-Live and Hypercare.</li>
+<li><strong>Operational Governance:</strong> Establish monitoring, incident, problem, reconciliation and support processes.</li>
+<li><strong>Vendor Management:</strong> Coordinate Core Banking, AML, payment and integration vendors.</li>
+<li><strong>Continuous Improvement:</strong> Drive API reuse, microservices modernization, automation, resilience and operational improvements.</li>
+</ul>
+
+<h2>Technology Landscape</h2>
+<ul class="case-list">
+<li>Core Banking Platform</li>
+<li>Payment Processing Platforms</li>
+<li>AML / Transaction Monitoring Platform</li>
+<li>Microservices Architecture</li>
+<li>Java / Spring Boot</li>
+<li>REST APIs</li>
+<li>API Gateway</li>
+<li>Message Broker / Event Streaming</li>
+<li>Docker / Kubernetes</li>
+<li>Cloud Platform</li>
+<li>CI/CD and DevOps</li>
+<li>Monitoring, Logging &amp; Distributed Tracing</li>
+</ul>
+
+<h2>Key Integration Metrics</h2>
+<ul class="case-list">
+<li>Payment transaction success rate.</li>
+<li>API response time and transaction latency.</li>
+<li>AML screening response time.</li>
+<li>Integration availability.</li>
+<li>Failed and retried transactions.</li>
+<li>Reconciliation exceptions.</li>
+<li>Production incidents and recurring defects.</li>
+<li>Service recovery time.</li>
+<li>API and microservice availability.</li>
+<li>Transaction traceability and audit completeness.</li>
+</ul>
+
+<div class="impact-box">
+<div class="impact-title">Transformation Outcome</div>
+<strong>
+Established a scalable API-led microservices integration capability
+connecting Core Banking, Payments and AML, reducing dependency on
+tightly coupled interfaces while improving transaction processing,
+service resilience, security, monitoring and the ability to introduce
+future banking capabilities.
+</strong>
+</div>
+
+<div class="case-takeaway">
+<strong>Program Management Takeaway:</strong>
+Modernizing Core Banking integration is not simply an API implementation.
+Successful delivery requires domain-aligned microservices, transaction
+integrity, AML and compliance integration, resilience engineering,
+security, observability, reconciliation and strong coordination across
+banking, technology and operational stakeholders.
+</div>
+
+</div>
+</body>
+</html>
