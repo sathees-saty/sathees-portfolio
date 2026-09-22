@@ -87,9 +87,9 @@
                 banking API modernization.
             </p>
         <a href="#"
-                   onclick="openCaseStudy('Blog-DevOps.html'); return false;">
-
-            </a>
+           onclick="openCaseStudy('Blog-DevOps.html'); return false;">
+            Read Article →
+        </a>
 
         </div>
 
@@ -408,6 +408,25 @@
     </p>
 
 </footer>
+<!-- BLOG ARTICLE POPUP -->
 
+<div id="caseModal" class="case-modal">
+
+    <div class="case-modal-box">
+
+        <button
+            class="case-close"
+            onclick="closeCaseStudy()"
+            aria-label="Close">
+            ×
+        </button>
+
+        <div id="caseStudyContent"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
