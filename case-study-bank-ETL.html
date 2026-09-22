@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking ETL &amp; Data Integration | Case Study</title>
+</head>
+
+<body>
+
+<div class="case-study-content">
+
+    <div class="case-study-tag">
+        Selected Transformation Program
+    </div>
+
+    <h1>
+        Banking ETL &amp; Data Integration
+    </h1>
+
+    <div class="case-meta">
+        🏦 Domain: Banking / Financial Services
+    </div>
+
+    <div class="case-meta">
+        💼 Role: Data / Program / Project Manager
+    </div>
+
+    <div class="case-meta">
+        🔄 Focus: Enterprise ETL, Data Integration &amp; Data Warehouse
+    </div>
+
+    <div class="case-meta">
+        📊 Outcome: Trusted Banking Data for Reporting, Analytics &amp; AI
+    </div>
+
+    <div class="challenge-box">
+
+        <h3>
+            Business Challenge
+        </h3>
+
+        <p>
+            The banking organization operated multiple source systems
+            across core banking, customer management, loans, deposits,
+            cards, payments, AML, fraud, risk, finance and branch
+            operations. Data was distributed across databases, CSV files,
+            APIs, file transfers and application platforms with different
+            structures and formats.
+        </p>
+
+        <p>
+            The ETL and data integration program established standardized
+            data pipelines to extract data from heterogeneous banking
+            sources, cleanse and transform it using business rules,
+            validate and reconcile the results, and load trusted data into
+            enterprise Data Warehouse and Data Lake platforms.
+        </p>
+
+    </div>
+
+    <h2>
+        Program Scope
+    </h2>
+
+    <ul class="case-list">
+
+        <li>
+            Identify banking source systems, data owners and data domains.
+        </li>
+
+        <li>
+            Define enterprise data ingestion and ETL architecture.
+        </li>
+
+        <li>
+            Extract structured and semi-structured banking data.
+        </li>
+
+        <li>
+            Establish staging, transformation and target data layers.
+        </li>
+
+        <li>
+            Implement data cleansing, standardization and validation.
+        </li>
+
+        <li>
+            Implement business rules, lookups, joins and aggregations.
+        </li>
+
+        <li>
+            Establish data-quality and reconciliation controls.
+        </li>
+
+        <li>
+            Load curated data into Data Warehouse / Data Lake platforms.
+        </li>
+
+        <li>
+            Create subject-area data marts for reporting and analytics.
+        </li>
+
+        <li>
+            Establish data lineage, monitoring and operational governance.
+        </li>
+
+    </ul>
+
+    <h2>
+        Banking Services &amp; Data Domains
+    </h2>
+
+    <ul class="case-list">
+
+        <li>
+            <strong>Customer / CIF:</strong>
+            Customer profile, KYC, demographics and customer relationships.
+        </li>
+
+        <li>
+            <strong>Core Banking:</strong>
+            Accounts, balances, transactions and customer account activity.
+        </li>
+
+        <li>
+            <strong>Savings &amp; Current Accounts:</strong>
+            Deposits, withdrawals, balances and account activity.
+        </li>
+
+        <li>
+            <strong>Loans:</strong>
+            Loan accounts, repayment schedules, EMI, outstanding balance
+            and delinquency.
+        </li>
+
+        <li>
+            <strong>Credit Risk:</strong>
+            Credit scores, risk ratings, exposure and risk indicators.
+        </li>
+
+        <li>
+            <strong>Mortgage / Home Loans:</strong>
+            Property, loan, repayment and portfolio information.
+        </li>
+
+        <li>
+            <strong>Credit Cards:</strong>
+            Card transactions, limits, payments and utilization.
+        </li>
+
+        <li>
+            <strong>Debit Cards:</strong>
+            Transactions, usage, status and customer activity.
+        </li>
+
+        <li>
+            <strong>Payments:</strong>
+            Domestic and international payment transactions.
+        </li>
+
+        <li>
+            <strong>UPI / Digital Payments:</strong>
+            Digital payment transactions, merchants and channels.
+        </li>
+
+        <li>
+            <strong>AML:</strong>
+            Alerts, suspicious transactions and investigation information.
+        </li>
+
+        <li>
+            <strong>Fraud Management:</strong>
+            Fraud events, rules, alerts and investigation cases.
+        </li>
+
+        <li>
+            <strong>Treasury:</strong>
+            Foreign exchange, liquidity and investment data.
+        </li>
+
+        <li>
+            <strong>Investment Services:</strong>
+            Securities, portfolios and trade information.
+        </li>
+
+        <li>
+            <strong>Branch Banking:</strong>
+            Branch, teller and branch transaction information.
+        </li>
+
+        <li>
+            <strong>Customer Service:</strong>
+            Complaints, service requests and customer interactions.
+        </li>
+
+        <li>
+            <strong>General Ledger:</strong>
+            GL accounts, journals and financial balances.
+        </li>
+
+        <li>
+            <strong>Regulatory Reporting:</strong>
+            Curated datasets supporting regulatory and compliance reporting.
+        </li>
+
+        <li>
+            <strong>Risk Management:</strong>
+            Credit, market and operational risk information.
+        </li>
+
+        <li>
+            <strong>Trade Finance:</strong>
+            Letters of credit, guarantees and trade transactions.
+        </li>
+
+    </ul>
+
+    <h2>
+        Banking ETL Architecture
+    </h2>
+
+    <p class="architecture-description">
+        The ETL architecture follows a layered data-integration model:
+        source systems feed an ingestion layer, data is persisted in a
+        staging area, transformed through business and data-quality rules,
+        and loaded into enterprise warehouse and data-mart layers for
+        reporting, analytics and AI use cases.
+    </p>
+
+    <div class="architecture-image-container">
+
+        <img
+            src="Banking_ETL.png"
+            alt="Banking ETL Source to Target Mapping and Data Flow"
+            class="architecture-image"
+        >
+
+        <div class="image-caption">
+            Banking ETL – Source to Target Mapping, Transformation &amp; Analytics
+        </div>
+
+    </div>
+
+    <h2>
+        ETL Lifecycle
+    </h2>
+
+    <h3>
+        01 — Source Discovery &amp; Data Assessment
+    </h3>
+
+    <ul class="case-list">
+        <li>Inventory banking source systems and data domains.</li>
+        <li>Identify data owners, interfaces and data dependencies.</li>
+        <li>Profile source data for completeness, consistency and quality.</li>
+        <li>Identify duplicate, missing and inconsistent records.</li>
+        <li>Define source-to-target integration requirements.</li>
+    </ul>
+
+    <h3>
+        02 — Data Ingestion
+    </h3>
+
+    <ul class="case-list">
+        <li>Extract data from databases, CSV files, APIs and enterprise file systems.</li>
+        <li>Support batch and scheduled ingestion patterns.</li>
+        <li>Validate inbound files and source-system extracts.</li>
+        <li>Load source data into controlled staging areas.</li>
+        <li>Track ingestion status and exceptions.</li>
+    </ul>
+
+    <h3>
+        03 — Transform &amp; Cleanse
+    </h3>
+
+    <ul class="case-list">
+        <li>Standardize data formats and data types.</li>
+        <li>Cleanse invalid, incomplete and inconsistent records.</li>
+        <li>Apply business rules and derived-field calculations.</li>
+        <li>Perform lookups, joins and aggregations.</li>
+        <li>Standardize customer, account, transaction and reference data.</li>
+    </ul>
+
+    <h3>
+        04 — Validate &amp; Reconcile
+    </h3>
+
+    <ul class="case-list">
+        <li>Validate source-to-target record counts.</li>
+        <li>Perform financial and transactional reconciliation.</li>
+        <li>Validate mandatory fields and business rules.</li>
+        <li>Identify rejected and exception records.</li>
+        <li>Provide data-quality reports and remediation tracking.</li>
+    </ul>
+
+    <h3>
+        05 — Load &amp; Curate
+    </h3>
+
+    <ul class="case-list">
+        <li>Load transformed data into warehouse target tables.</li>
+        <li>Populate facts, dimensions and subject-area data marts.</li>
+        <li>Maintain historical and analytical datasets.</li>
+        <li>Apply appropriate partitioning and performance strategies.</li>
+        <li>Validate target data availability for consuming applications.</li>
+    </ul>
+
+    <h3>
+        06 — Reporting &amp; Analytics
+    </h3>
+
+    <ul class="case-list">
+        <li>Provide curated data for business intelligence.</li>
+        <li>Support management and operational dashboards.</li>
+        <li>Enable regulatory and compliance reporting.</li>
+        <li>Support customer, risk, fraud and payment analytics.</li>
+        <li>Provide trusted datasets for AI and machine-learning use cases.</li>
+    </ul>
+
+    <h3>
+        07 — Monitor &amp; Operate
+    </h3>
+
+    <ul class="case-list">
+        <li>Monitor ETL job execution and data pipelines.</li>
+        <li>Track failures, delays and data-quality exceptions.</li>
+        <li>Establish operational alerts and escalation processes.</li>
+        <li>Maintain data lineage and processing audit trails.</li>
+        <li>Optimize pipeline performance and operational reliability.</li>
+    </ul>
+
+    <h2>
+        Source-to-Target Mapping
+    </h2>
+
+    <ul class="case-list">
+
+        <li>
+            <strong>Direct Mapping:</strong>
+            Map source fields directly to target fields where no
+            transformation is required.
+        </li>
+
+        <li>
+            <strong>Data Type Conversion:</strong>
+            Convert source formats into target data types and standards.
+        </li>
+
+        <li>
+            <strong>Data Cleansing:</strong>
+            Remove unwanted spaces, standardize formats and handle
+            invalid or incomplete values.
+        </li>
+
+        <li>
+            <strong>Business Rule Transformation:</strong>
+            Apply banking business rules to derive classifications
+            and analytical attributes.
+        </li>
+
+        <li>
+            <strong>Lookup Transformation:</strong>
+            Enrich transaction and customer data using reference data.
+        </li>
+
+        <li>
+            <strong>Join Transformation:</strong>
+            Combine information from multiple banking source systems.
+        </li>
+
+        <li>
+            <strong>Aggregation:</strong>
+            Calculate balances, totals, transaction summaries and
+            analytical measures.
+        </li>
+
+    </ul>
+
+    <h2>
+        Example Banking Transformation
+    </h2>
+
+    <div class="challenge-box">
+
+        <h3>
+            Transaction Classification
+        </h3>
+
+        <p>
+            A transaction amount received from a source banking system
+            can be transformed into a standardized analytical category.
+        </p>
+
+        <p>
+            Example business rule:
+            transaction amount greater than 30,000 → HIGH VALUE;
+            otherwise → NORMAL.
+        </p>
+
+        <p>
+            Customer names can be standardized to uppercase, dates can
+            be converted from source formats into enterprise date
+            standards, and transaction attributes can be enriched using
+            reference tables.
+        </p>
+
+    </div>
+
+    <h2>
+        Data Quality &amp; Governance
+    </h2>
+
+    <ul class="case-list">
+        <li>Data completeness validation.</li>
+        <li>Data accuracy and consistency checks.</li>
+        <li>Duplicate detection and handling.</li>
+        <li>Source-to-target reconciliation.</li>
+        <li>Business-rule validation.</li>
+        <li>Data lineage and auditability.</li>
+        <li>Data ownership and stewardship.</li>
+        <li>Exception management and remediation.</li>
+        <li>Controlled data access and security.</li>
+        <li>ETL change and release governance.</li>
+    </ul>
+
+    <h2>
+        Program Manager – Roles &amp; Responsibilities
+    </h2>
+
+    <ul class="case-list">
+        <li><strong>Program Planning:</strong> Define ETL roadmap, scope, milestones, dependencies and delivery governance.</li>
+        <li><strong>Data Domain Coordination:</strong> Coordinate Customer, Core Banking, Loans, Cards, Payments, Risk, AML, Fraud and Finance workstreams.</li>
+        <li><strong>Stakeholder Management:</strong> Manage business, data owners, data engineering, architecture, analytics and technology stakeholders.</li>
+        <li><strong>Data Governance:</strong> Establish data-quality, ownership, lineage and reconciliation governance.</li>
+        <li><strong>Architecture Governance:</strong> Coordinate ETL, data warehouse, data lake and integration architecture decisions.</li>
+        <li><strong>Delivery Management:</strong> Govern development, testing, deployment and production transition.</li>
+        <li><strong>Risk &amp; Dependency Management:</strong> Manage source-system dependencies, data-quality risks and integration issues.</li>
+        <li><strong>Vendor Management:</strong> Coordinate ETL, cloud, data-platform and implementation partners.</li>
+        <li><strong>Operational Governance:</strong> Establish monitoring, support, incident and batch-operation processes.</li>
+        <li><strong>Continuous Improvement:</strong> Drive pipeline optimization, automation, data-quality improvement and new analytical capabilities.</li>
+    </ul>
+
+    <h2>
+        Technology Landscape
+    </h2>
+
+    <ul class="case-list">
+        <li>ETL / Data Integration Platforms</li>
+        <li>Informatica</li>
+        <li>AWS Glue</li>
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Apache Spark</li>
+        <li>Databricks</li>
+        <li>Snowflake</li>
+        <li>Data Warehouse</li>
+        <li>Data Lake</li>
+        <li>Hadoop / HDFS / Hive</li>
+        <li>REST APIs</li>
+        <li>SFTP / Enterprise File Transfer</li>
+        <li>Power BI / Tableau</li>
+    </ul>
+
+    <h2>
+        Key ETL &amp; Data Metrics
+    </h2>
+
+    <ul class="case-list">
+        <li>ETL job success rate.</li>
+        <li>Data pipeline availability.</li>
+        <li>Source-to-target reconciliation accuracy.</li>
+        <li>Data-quality exception rate.</li>
+        <li>Record processing volume.</li>
+        <li>ETL processing time and latency.</li>
+        <li>Rejected and reprocessed records.</li>
+        <li>Data completeness and consistency.</li>
+        <li>Reporting data freshness.</li>
+        <li>Production incidents related to data pipelines.</li>
+    </ul>
+
+    <h2>
+        Business Use Cases Enabled
+    </h2>
+
+    <ul class="case-list">
+        <li>Customer 360 and customer analytics.</li>
+        <li>Loan portfolio and credit-risk analytics.</li>
+        <li>Credit-card and payment analytics.</li>
+        <li>Fraud detection and investigation analytics.</li>
+        <li>AML transaction monitoring and reporting.</li>
+        <li>Branch performance analytics.</li>
+        <li>Financial and management reporting.</li>
+        <li>Regulatory and compliance reporting.</li>
+        <li>Liquidity and treasury analytics.</li>
+        <li>AI/ML data preparation for loan-risk and fraud prediction.</li>
+    </ul>
+
+    <div class="impact-box">
+
+        <div class="impact-title">
+            Transformation Outcome
+        </div>
+
+        <strong>
+            Established an enterprise banking ETL and data-integration
+            capability that consolidated data from Core Banking, Customer,
+            Loans, Deposits, Cards, Payments, AML, Fraud, Risk and Finance
+            domains into trusted analytical datasets, enabling reporting,
+            regulatory analytics, customer insights, risk management,
+            fraud analytics and AI/ML-ready data foundations.
+        </strong>
+
+    </div>
+
+    <div class="case-takeaway">
+
+        <strong>
+            Program Management Takeaway:
+        </strong>
+
+        Enterprise banking ETL is more than moving data between systems.
+        Successful delivery requires source-system understanding, data
+        governance, source-to-target mapping, business-rule management,
+        data-quality controls, reconciliation, operational monitoring and
+        alignment between business, data and technology teams.
+
+    </div>
+
+</div>
+
+</body>
+</html>
