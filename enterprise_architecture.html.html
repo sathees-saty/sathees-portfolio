@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blogs | SATHEES KUMAR KANDASAMY</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="brand">
+            SATHEES KUMAR KANDASAMY
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="blog.html">Blogs</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- BLOG HEADER -->
+<section class="section">
+
+    <div class="section-heading">
+        <span class="section-label">INSIGHTS & KNOWLEDGE</span>
+        <div class="heading-line"></div>
+    </div>
+
+    <h1 class="section-title">
+        Program & Technology Leadership Blog
+    </h1>
+ 
+    </div>
+    
+</section>
+
+
+<!-- BLOG ARTICLES -->
+<section class="section">
+
+    <div class="portfolio-grid">
+
+
+        <!-- DEVOPS -->
+        <div class="portfolio-card">
+
+            <div class="portfolio-category">
+                DEVOPS
+            </div>
+
+            <h3>
+                DevOps for Project Managers
+            </h3>
+
+            <p>
+                Understand DevOps principles, practices, CI/CD,
+                automation, cloud platforms and how project management
+                evolves in a continuous delivery environment.
+            </p>
+
+            <p>
+                <strong>Topics:</strong>
+                DevOps principles, CI/CD, automation, tools,
+                governance, project manager responsibilities and
+                banking API modernization.
+            </p>
+        <a href="#"
+           onclick="openCaseStudy('Blog-DevOps.html'); return false;">
+            Read Article →
+        </a>
+
+        </div>
+
+
+        <!-- GEN AI -->
+        <div class="portfolio-card">
+
+            <div class="portfolio-category">
+                Generative AI
+            </div>
+
+            <h3>
+                Generative AI for Project Managers
+            </h3>
+
+            <p>
+                Generative AI is changing how project and program teams plan, communicate, analyze information and manage delivery.
+            </p>
+
+            <p>
+                <strong>Topics:</strong>
+                Core Generative AI Capabilities, How Project Managers Can Use Generative AI.
+            </p>
+
+            <a href="#"
+               onclick="openCaseStudy('Blog_Gen_AI.html'); return false;">
+                Read Article →
+            </a>
+
+        </div>
+
+        <!-- PROGRAMS FROM STRATEGY TO EXECUTION -->
+        <div class="portfolio-card">
+
+            <div class="portfolio-category">
+                PROGRAM MANAGMENT
+            </div>
+
+            <h3>
+                Programs from strategy to execution
+            </h3>
+
+            <p>
+                Explore how program managers connect strategy, governance, planning, 
+                execution and value realization to deliver complex business 
+                and technology transformations.
+            </p>
+
+            <p>
+                <strong>Topics:</strong>
+                    Program Strategy, Vision & Objectives, Execution and Outcomes
+            </p>
+        <a href="#"
+           onclick="openCaseStudy('Blog_Program.html'); return false;">
+            Read Article →
+        </a>
+
+        </div>
+                <!-- 3 PILLERS OF PROGRAM MANAGEMENT -->
+        <div class="portfolio-card">
+
+            <div class="portfolio-category">
+                3 PILLERS OF PROGRAM MANAGEMENT
+            </div>
+
+            <h3>
+                Programs from strategy to execution
+            </h3>
+
+            <p>
+                From Project Delivery to Business Transformation: Strategy, Innovation & Leadership
+            </p>
+
+            <p>
+                <strong>Topics:</strong>
+                    Program Strategy, Vision & Objectives, Execution and Outcomes
+            </p>
+              <a href="#"
+               onclick="openCaseStudy('blog_program_leadership.html'); return false;">
+                Read Article →
+            </a>
+
+        </div>
+        
+        
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO CTA -->
+<section class="section contact-section">
+
+    <div class="contact-content">
+
+        <h2>
+            Explore My Professional Portfolio
+        </h2>
+
+        <p>
+            Explore detailed case studies covering SAP,
+            Healthcare, Banking, FinTech, B2B eCommerce,
+            Data, AI, Cloud and Managed Services.
+        </p>
+
+        <div class="contact-buttons">
+
+            <a href="index.html#portfolio" class="contact-button">
+                View Case Studies →
+            </a>
+
+            <a href="index.html#contact" class="contact-button">
+                Contact Me →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 SATHEES KUMAR KANDASAMY.
+        Program & Technology Leadership.
+    </p>
+
+</footer>
+<!-- BLOG ARTICLE POPUP -->
+
+<div id="caseModal" class="case-modal">
+
+    <div class="case-modal-box">
+
+        <button
+            class="case-close"
+            onclick="closeCaseStudy()"
+            aria-label="Close">
+            ×
+        </button>
+
+        <div id="caseStudyContent"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
