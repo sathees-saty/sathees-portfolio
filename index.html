@@ -1,6 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+/* =========================================
+   CAPABILITIES DROPDOWN
+   ========================================= */
 
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-arrow {
+    font-size: 16px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+/* Dropdown panel */
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 300px;
+    background: #ffffff;
+    
+    border-radius: 0 0 14px 14px;
+    border-top: 3px solid #07857d;
+    
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    
+    padding: 8px 0;
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+    transition: opacity 0.2s ease,
+                visibility 0.2s ease,
+                transform 0.2s ease;
+    
+    z-index: 9999;
+}
+
+/* Small triangle */
+.nav-dropdown-menu::before {
+    content: "";
+    
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    
+    transform: translateX(-50%);
+    
+    width: 0;
+    height: 0;
+    
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #07857d;
+}
+
+/* Show dropdown on hover */
+.nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Arrow rotation */
+.nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown links */
+.nav-dropdown-menu a {
+    display: block;
+    
+    padding: 16px 20px;
+    
+    color: #102a43;
+    text-decoration: none;
+    
+    font-size: 16px;
+    font-weight: 500;
+    
+    border-bottom: 1px solid #edf1f3;
+    
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                padding-left 0.2s ease;
+}
+
+.nav-dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+/* Mouse over */
+.nav-dropdown-menu a:hover {
+    background: #f4fafa;
+    color: #07857d;
+    padding-left: 26px;
+}
+</style>
 <head>
     <meta charset="UTF-8">
 
@@ -56,6 +166,8 @@
 
             <a href="#domains">Domains</a>
 
+            
+
             <a href="#contact">Contact</a>
 
             <a href="blog.html" target="_blank">
@@ -64,7 +176,55 @@
             
         </nav>
 
+/* =========================================
+   START HERE
+   ========================================= */
+<li class="nav-dropdown">
+    <a href="#" class="nav-dropdown-link">
+        Capabilities <span class="dropdown-arrow">⌄</span>
+    </a>
 
+    <div class="nav-dropdown-menu">
+
+        <a href="blog.html#enterprise-architecture">
+            Enterprise Architecture
+        </a>
+
+        <a href="blog.html#cloud-devops">
+            Cloud &amp; DevOps
+        </a>
+
+        <a href="blog.html#data-ai">
+            Data &amp; AI
+        </a>
+
+        <a href="blog.html#sap-erp">
+            SAP &amp; ERP
+        </a>
+
+        <a href="blog.html#integration-apis">
+            Integration &amp; APIs
+        </a>
+
+        <a href="blog.html#healthcare-it">
+            Healthcare IT
+        </a>
+
+        <a href="blog.html#bfsi-fintech">
+            BFSI &amp; FinTech
+        </a>
+
+        <a href="blog.html#application-engineering">
+            Application Engineering
+        </a>
+
+    </div>
+</li>
+
+        
+/* =========================================
+   END HERE
+   ========================================= */
         <a href="resume.pdf"
            class="resume-button"
            target="_blank">
