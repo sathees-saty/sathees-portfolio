@@ -22,11 +22,21 @@
 }
 
 /* Dropdown panel */
-.nav-dropdown-menu {
-    position: absolute;
-    top: calc(100% + 12px);
-    left: 50%;
-    transform: translateX(-50%);
+
+   /* Keep Capabilities submenu open when clicked/focused */
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+   /* Keep arrow open */
+   .nav-dropdown:hover .dropdown-arrow,
+   .nav-dropdown:focus-within .dropdown-arrow {
+       transform: rotate(180deg);
+   }
     
     width: 300px;
     background: #ffffff;
