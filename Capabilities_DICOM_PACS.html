@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DICOM & PACS Integration — Technical Capabilities</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="case-study-content">
+
+<div class="case-study-tag">HEALTHCARE IT • DICOM • PACS • INTEGRATION</div>
+<h1>DICOM &amp; PACS Integration</h1>
+<div class="case-meta">Technical Architecture • Medical Imaging • Interoperability • Image Data Flow</div>
+
+<p>Technical capabilities for designing, integrating and managing healthcare imaging ecosystems using DICOM, PACS, RIS, HIS/EMR, VNA, diagnostic workstations and modern healthcare integration patterns.</p>
+
+<div class="architecture-image-container">
+<img src="Capabilities_DICOM_PACS.png" alt="DICOM and PACS Integration Technical Architecture" class="architecture-image">
+<div class="image-caption">DICOM &amp; PACS integration architecture covering imaging modalities, DICOM services, PACS components, healthcare systems, workflows, protocols, storage and image exchange.</div>
+</div>
+
+<h2>1. DICOM Technical Fundamentals</h2>
+<p>DICOM (Digital Imaging and Communications in Medicine) defines the standard used to represent, transmit, store, query, retrieve and exchange medical imaging information.</p>
+<ul class="case-list">
+<li><strong>IOD — Information Object Definition:</strong> Defines the structure and attributes of imaging objects such as CT, MR and ultrasound.</li>
+<li><strong>SOP Class:</strong> Defines the DICOM object type and supported operations.</li>
+<li><strong>SOP Instance UID:</strong> Globally unique identifier for a DICOM object, series or study.</li>
+<li><strong>Transfer Syntax:</strong> Defines encoding, byte ordering, value representation and compression.</li>
+<li><strong>AE Title:</strong> Identifies a DICOM application entity such as a modality, PACS or workstation.</li>
+</ul>
+
+<h2>2. DICOM Services</h2>
+<ul class="case-list">
+<li><strong>C-STORE:</strong> Send and store DICOM objects to PACS or DICOM storage.</li>
+<li><strong>C-FIND:</strong> Query studies, series or images using search criteria.</li>
+<li><strong>C-GET:</strong> Retrieve DICOM objects from a remote application.</li>
+<li><strong>C-MOVE:</strong> Request transfer of images to another destination.</li>
+<li><strong>C-PRINT:</strong> Send images to compatible DICOM printers.</li>
+<li><strong>C-STORE-COMMITMENT:</strong> Confirm successful storage of DICOM objects.</li>
+</ul>
+
+<h2>3. PACS Architecture &amp; System Integration</h2>
+<p>A typical PACS ecosystem connects imaging modalities, network infrastructure, DICOM services, image storage, clinical applications and visualization clients.</p>
+<ul class="case-list">
+<li><strong>Imaging Modalities:</strong> CT, MRI, ultrasound, X-ray, nuclear medicine and other devices.</li>
+<li><strong>Network Infrastructure:</strong> LAN/WAN/VPN, firewall controls and secure DICOM communication.</li>
+<li><strong>PACS Server:</strong> DICOM receiver, indexing, study management and application services.</li>
+<li><strong>Image Storage:</strong> RAID, SAN, NAS and other storage platforms.</li>
+<li><strong>VNA:</strong> Vendor-neutral long-term image archive and enterprise image management.</li>
+<li><strong>Access:</strong> Diagnostic workstations, web/zero-footprint viewers and mobile access.</li>
+</ul>
+
+<h2>4. DICOM Data Flow</h2>
+<div class="challenge-box"><p><strong>Imaging Modality → DICOM C-STORE → PACS → Indexing &amp; Storage → C-FIND / C-MOVE → Diagnostic Viewer</strong></p></div>
+<p>The workflow begins with image acquisition, continues through DICOM transmission and PACS indexing/storage, and ends with authorized query, retrieval and visualization.</p>
+
+<h2>5. PACS Integration with Healthcare Systems</h2>
+<ul class="case-list">
+<li><strong>RIS ↔ PACS:</strong> Scheduling, modality worklists, imaging orders and exam information.</li>
+<li><strong>HIS/EMR ↔ PACS:</strong> Patient demographics, encounters, clinical context and reports.</li>
+<li><strong>VNA ↔ PACS:</strong> Long-term image archiving and enterprise retrieval.</li>
+<li><strong>Cloud / Offsite DR:</strong> Replication, backup and disaster recovery.</li>
+<li><strong>Diagnostic Viewers:</strong> Workstation, web and mobile access to authorized studies.</li>
+</ul>
+
+<h2>6. DICOM, HL7 &amp; IHE</h2>
+<h3>DICOM</h3>
+<p>Provides the imaging communication and object standard for image storage, query, retrieval and exchange.</p>
+<h3>HL7</h3>
+<p>Supports clinical and administrative information exchange including patient demographics, orders, scheduling and results, complementing DICOM in imaging workflows.</p>
+<h3>IHE</h3>
+<p>Defines practical interoperability profiles that combine standards such as DICOM and HL7 to support consistent cross-vendor healthcare workflows.</p>
+
+<h2>7. Modality Worklist Integration</h2>
+<p>Modality Worklist reduces manual patient and examination data entry by allowing imaging devices to retrieve scheduled procedure information.</p>
+<div class="challenge-box"><p><strong>RIS / HIS → DICOM Modality Worklist → Imaging Modality → DICOM Study → PACS</strong></p></div>
+
+<h2>8. Image Storage &amp; Data Management</h2>
+<ul class="case-list">
+<li>Online, nearline and long-term image storage</li>
+<li>RAID, SAN and NAS architectures</li>
+<li>Vendor-neutral archive strategies</li>
+<li>Lossless and lossy compression</li>
+<li>Study, series, instance and patient metadata management</li>
+<li>Retention and lifecycle management</li>
+<li>Backup, replication and disaster recovery</li>
+</ul>
+
+<h2>9. Security &amp; Network Considerations</h2>
+<ul class="case-list">
+<li>DICOM over TCP/IP and secure transport options</li>
+<li>Network segmentation for clinical systems</li>
+<li>Firewall and port management</li>
+<li>TLS-based secure communication where supported</li>
+<li>AE Title and endpoint configuration</li>
+<li>Authentication, authorization and access control</li>
+<li>Audit logging and monitoring</li>
+<li>Protection of patient and imaging data</li>
+</ul>
+
+<h2>10. Integration Engineering Capabilities</h2>
+<ul class="case-list">
+<li>Point-to-point and interface-engine integration</li>
+<li>API and service-based integration around imaging ecosystems</li>
+<li>DICOM routing and rules-based forwarding</li>
+<li>HL7 ADT, ORM and ORU integration</li>
+<li>Data transformation and message validation</li>
+<li>Interface monitoring and exception handling</li>
+<li>Image migration and reconciliation</li>
+<li>Cross-vendor interoperability testing</li>
+</ul>
+
+<h2>11. Technical Migration &amp; Interoperability</h2>
+<ul class="case-list">
+<li>Source PACS assessment and imaging inventory</li>
+<li>DICOM connectivity and endpoint validation</li>
+<li>Patient and study reconciliation</li>
+<li>Historical image migration</li>
+<li>Metadata validation</li>
+<li>Duplicate and orphan-study handling</li>
+<li>Migration performance monitoring</li>
+<li>Post-migration image integrity validation</li>
+</ul>
+
+<h2>12. Technical Monitoring &amp; Troubleshooting</h2>
+<ul class="case-list">
+<li>Association failures and AE Title configuration issues</li>
+<li>Unsupported SOP Classes or Transfer Syntax incompatibilities</li>
+<li>Network latency and connectivity problems</li>
+<li>Storage capacity and performance issues</li>
+<li>Failed or delayed image transfers</li>
+<li>HL7/DICOM message mismatches</li>
+<li>Patient and study reconciliation errors</li>
+</ul>
+
+<h2>13. End-to-End Technical Workflow</h2>
+<div class="impact-box">
+<ul class="case-list">
+<li>Patient registration and imaging order creation</li>
+<li>Scheduling and Modality Worklist generation</li>
+<li>Patient and procedure selection at the modality</li>
+<li>Image acquisition and DICOM C-STORE transmission</li>
+<li>PACS indexing and image storage</li>
+<li>Clinical query using C-FIND</li>
+<li>Image retrieval using C-GET or C-MOVE</li>
+<li>Diagnostic viewing and reporting</li>
+<li>Long-term archive and governed image access</li>
+</ul>
+</div>
+
+<h2>Technical Capability Summary</h2>
+<p class="case-takeaway">DICOM and PACS integration combines DICOM services, PACS architecture, network engineering, HL7 interoperability, IHE workflows, image storage, metadata management, security, migration and operational monitoring. These capabilities provide the technical foundation for reliable, interoperable and scalable medical-imaging ecosystems.</p>
+
+</div>
+</body>
+</html>
