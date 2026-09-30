@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Sentinel — AI-Driven Financial Intelligence & Automation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="case-study-content">
+<div class="case-study-tag">SAP FI/CO • DATA & AI • FINANCIAL AUTOMATION</div>
+<h1>Project Sentinel: AI-Driven Financial Intelligence &amp; Automation</h1>
+<div class="case-meta">Project Code Name: Operation Fiscal Guard (OFG) • SAP S/4HANA Finance • SAP BTP • AI/ML</div>
+
+<p>A representative SAP FI/CO transformation initiative focused on embedding intelligent automation and machine learning into the finance landscape to strengthen financial controls, improve cash-flow visibility, automate invoice processing and detect financial anomalies.</p>
+
+<div class="challenge-box"><p><strong>Program Objective:</strong> Build an intelligent corporate finance ecosystem around SAP S/4HANA Finance and SAP Business Technology Platform (BTP), combining AI/ML, workflow automation and analytics across Accounts Payable, Accounts Receivable, Treasury, General Ledger, Controlling and Profitability Analysis.</p></div>
+
+<h2>Project Identity</h2>
+<ul class="case-list">
+<li><strong>Project:</strong> Project Sentinel — AI-Driven Financial Intelligence &amp; Automation</li>
+<li><strong>Code Name:</strong> Operation Fiscal Guard (OFG)</li>
+<li><strong>Primary Platform:</strong> SAP S/4HANA Finance</li>
+<li><strong>Intelligence Platform:</strong> SAP Business Technology Platform (BTP)</li>
+<li><strong>Analytics:</strong> SAP Analytics Cloud (SAC)</li>
+<li><strong>Delivery Model:</strong> Agile, eight-sprint release blueprint</li>
+</ul>
+
+<h2>Scope Definition</h2>
+<h3>In Scope</h3>
+<p>The release is structured around four core capability pillars.</p>
+<h3>1. Real-Time Fraud &amp; Anomaly Detection</h3>
+<ul class="case-list">
+<li>Apply machine-learning classification and anomaly-detection techniques to payment runs such as F110 and selected financial postings.</li>
+<li>Monitor vendor master changes through BP/vendor processes and identify high-risk changes such as unauthorized bank-detail modifications.</li>
+<li>Connect risk indicators to SAP Business Workflow for review, blocking and escalation.</li>
+<li>Provide financial-control teams with actionable risk alerts and audit visibility.</li>
+</ul>
+<h3>2. Predictive Cash-Flow Forecasting</h3>
+<ul class="case-list">
+<li>Combine Accounts Receivable, Accounts Payable and Treasury data into a forecasting pipeline.</li>
+<li>Use time-series predictive models on SAP BTP AI Core to estimate future cash positions and customer payment delays.</li>
+<li>Expose forecasts, variances and working-capital insights through SAP Analytics Cloud.</li>
+</ul>
+<h3>3. Intelligent Invoice Automation</h3>
+<ul class="case-list">
+<li>Use SAP Document Information Extraction and intelligent automation to process OCR-based invoices.</li>
+<li>Extract vendor, amount, tax and line-item information and map it to SAP posting structures.</li>
+<li>Perform purchase-order and goods-receipt validation using three-way matching.</li>
+<li>Enable touchless posting for standard, validated invoices while routing exceptions for human review.</li>
+</ul>
+<h3>4. Financial Control &amp; Governance</h3>
+<ul class="case-list">
+<li>Implement automated control rules across Cost Center Accounting and Profitability Analysis.</li>
+<li>Detect unusual budget variance and financial behavior.</li>
+<li>Provide audit-log visibility and structured compliance reporting.</li>
+<li>Align access controls with segregation-of-duties and internal-audit requirements.</li>
+</ul>
+<h3>Out of Scope</h3>
+<ul class="case-list">
+<li>Country-specific tax and legal-jurisdiction configuration beyond standard SAP capabilities.</li>
+<li>Central Finance data replication or a separate CFIN sidecar architecture.</li>
+<li>Direct SWIFT or corporate-bank network infrastructure and cryptographic-key negotiation.</li>
+<li>Physical mailroom operations, scanner hardware provisioning and physical document archiving logistics.</li>
+</ul>
+
+<h2>Agile Release Blueprint</h2>
+<div class="impact-box"><p><strong>Sprint 0: Setup → Sprints 1–2: Invoice Automation → Sprints 3–4: Cash-Flow Forecasting → Sprints 5–6: Fraud Detection → Sprints 7–8: Anomaly Detection &amp; Go-Live</strong></p></div>
+
+<h2>Sprint-by-Sprint Delivery Plan</h2>
+<h3>Sprint 0 — Architecture &amp; Financial Governance</h3>
+<ul class="case-list"><li>Provision SAP BTP AI Core and Document Information Extraction services.</li><li>Establish cloud connectivity and security controls.</li><li>Map relevant FI/CO data structures and define training-data requirements.</li><li>Align access management, segregation-of-duties and internal-audit controls.</li></ul>
+<h3>Sprint 1 — Intelligent Invoice Automation: Extraction</h3>
+<ul class="case-list"><li>Configure Document Information Extraction schemas.</li><li>Capture vendor ID, tax, amount and invoice line-item attributes.</li><li>Map extracted information to SAP Accounts Payable input structures.</li></ul>
+<h3>Sprint 2 — Intelligent Invoice Automation: Matching &amp; Posting</h3>
+<ul class="case-list"><li>Implement three-way matching across invoice, purchase order and goods receipt data.</li><li>Define validation and exception rules.</li><li>Enable automated posting for verified invoices.</li></ul>
+<h3>Sprint 3 — Predictive Cash-Flow: Data &amp; Models</h3>
+<ul class="case-list"><li>Prepare historical billing, payment behavior and treasury datasets.</li><li>Develop time-series forecasting models on BTP AI Core.</li><li>Calculate customer payment-delay indicators and projected cash positions.</li></ul>
+<h3>Sprint 4 — Predictive Cash-Flow: Analytics</h3>
+<ul class="case-list"><li>Integrate forecasting outputs with SAP Analytics Cloud.</li><li>Build treasury dashboards for cash position, forecast and variance analysis.</li><li>Enable management visibility into working-capital trends.</li></ul>
+<h3>Sprint 5 — Fraud Detection: Intelligence</h3>
+<ul class="case-list"><li>Monitor vendor-master changes and payment-run activity.</li><li>Apply anomaly and classification models to identify suspicious patterns.</li><li>Detect high-risk changes such as unusual bank-detail modifications.</li></ul>
+<h3>Sprint 6 — Fraud Detection: Response</h3>
+<ul class="case-list"><li>Connect fraud indicators to SAP Business Workflow.</li><li>Route suspicious transactions to financial-control queues.</li><li>Implement controlled payment-risk blocks and escalation paths.</li><li>Expose investigation status through appropriate Fiori-based experiences.</li></ul>
+<h3>Sprint 7 — Financial Anomaly Detection</h3>
+<ul class="case-list"><li>Apply multi-layer anomaly filters to journal-entry and financial data streams.</li><li>Validate unusual posting patterns and potential duplicate or inconsistent entries.</li><li>Extend control checks across relevant CO and profitability dimensions.</li></ul>
+<h3>Sprint 8 — Cutover, Go-Live &amp; Hypercare</h3>
+<ul class="case-list"><li>Complete end-to-end UAT with accounting and finance teams.</li><li>Finalize production configuration and security validation.</li><li>Seed baseline ML data and validate production monitoring.</li><li>Execute controlled Go-Live and establish hypercare support.</li></ul>
+
+<h2>Sprint Delivery Matrix</h2>
+<table style="width:100%;border-collapse:collapse;margin:20px 0 35px;">
+<thead><tr><th style="text-align:left;padding:12px;border-bottom:2px solid #dce7eb;">Sprint</th><th style="text-align:left;padding:12px;border-bottom:2px solid #dce7eb;">Core Focus</th><th style="text-align:left;padding:12px;border-bottom:2px solid #dce7eb;">Primary Technical Components</th><th style="text-align:left;padding:12px;border-bottom:2px solid #dce7eb;">Key Deliverable</th></tr></thead>
+<tbody>
+<tr><td style="padding:12px;border-bottom:1px solid #e6eef1;">0</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Financial Foundation</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">BTP AI Core, Cloud connectivity</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Secure ML &amp; OCR environment</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e6eef1;">1</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Invoice Automation — Extract</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">BTP Document Information Extraction</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Automated invoice metadata capture</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e6eef1;">2</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Invoice Automation — Post</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">S/4HANA AP posting, matching logic</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Touchless invoice processing</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e6eef1;">3</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Cash Forecasting — Models</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Time-series models, financial data</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Cash-position predictor</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e6eef1;">4</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Cash Forecasting — UX</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">SAP Analytics Cloud</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Treasury forecasting dashboard</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e6eef1;">5</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Fraud Detection — Logic</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">ML anomaly/classification, master-data audit</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Fraud identification engine</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e6eef1;">6</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Fraud Detection — Response</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">SAP Business Workflow, Fiori</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Automated payment-risk workflow</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e6eef1;">7</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Anomaly Detection</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Journal-entry analysis, CO/PA checks</td><td style="padding:12px;border-bottom:1px solid #e6eef1;">Financial posting validation filters</td></tr>
+<tr><td style="padding:12px;">8</td><td style="padding:12px;">Deployment &amp; Hypercare</td><td style="padding:12px;">Cutover, production launch</td><td style="padding:12px;"><strong>Live AI-enabled FI/CO ecosystem</strong></td></tr>
+</tbody></table>
+
+<h2>Target Solution Architecture</h2>
+<ul class="case-list"><li><strong>SAP S/4HANA FI/CO:</strong> Core financial transactions, accounting, controlling and source business data.</li><li><strong>SAP BTP AI Core:</strong> Model development, training and AI/ML execution.</li><li><strong>Document Information Extraction:</strong> Intelligent invoice data capture.</li><li><strong>SAP Business Workflow:</strong> Risk-based approvals, blocks and escalation.</li><li><strong>SAP Analytics Cloud:</strong> Cash forecasting, variance analysis and executive reporting.</li><li><strong>Fiori:</strong> User-facing operational and financial-control experiences.</li><li><strong>Integration &amp; Security:</strong> Controlled data movement, identity, authorization and monitoring.</li></ul>
+
+<h2>Program Governance &amp; Delivery Controls</h2>
+<ul class="case-list"><li>Finance business-owner and product-owner alignment</li><li>Architecture and AI/ML design governance</li><li>Data quality and model-readiness controls</li><li>Security, access and segregation-of-duties review</li><li>Model validation and business acceptance</li><li>RAID and dependency management</li><li>Sprint reviews, demos and release readiness gates</li><li>UAT, cutover and hypercare governance</li></ul>
+
+<h2>Key Program Metrics</h2>
+<ul class="case-list"><li>Invoice extraction and matching accuracy</li><li>Touchless invoice-processing rate</li><li>Forecast accuracy and forecast variance</li><li>Fraud/anomaly detection precision and false-positive rate</li><li>High-risk vendor-change detection rate</li><li>Exception resolution time</li><li>Payment-risk review cycle time</li><li>Control and audit compliance</li><li>Sprint predictability and release readiness</li></ul>
+
+<h2>Expected Business Outcomes</h2>
+<div class="impact-box"><ul class="case-list"><li>Stronger financial controls and continuous risk monitoring</li><li>Earlier identification of suspicious financial activity</li><li>Improved cash-flow visibility and forecasting capability</li><li>Reduced manual effort in invoice processing</li><li>Faster exception identification and resolution</li><li>Improved auditability and control transparency</li><li>More scalable finance automation</li><li>AI-enabled foundation for continuous FI/CO improvement</li></ul></div>
+
+<h2>Program Manager's Role</h2>
+<ul class="case-list"><li>Translate finance transformation objectives into an executable AI/automation roadmap.</li><li>Coordinate SAP FI/CO, BTP, data, AI/ML, integration, security and finance teams.</li><li>Manage sprint scope, dependencies, risks, issues and delivery commitments.</li><li>Establish governance for data, models, controls and financial compliance.</li><li>Drive business validation with controllers, treasury, AP, AR and audit stakeholders.</li><li>Coordinate UAT, cutover, Go-Live and hypercare.</li><li>Track adoption, quality, control effectiveness and business value.</li></ul>
+
+<h2>Key Takeaway</h2>
+<p class="case-takeaway">Project Sentinel demonstrates how SAP FI/CO can evolve from a transactional finance platform into an intelligent financial operations ecosystem by combining S/4HANA financial data with AI/ML, workflow automation, document intelligence and analytics. The eight-sprint blueprint provides a structured path from secure foundation and invoice automation through predictive cash-flow, fraud detection, anomaly controls and production Go-Live.</p>
+
+</div>
+</body>
+</html>
