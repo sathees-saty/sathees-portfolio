@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio case study: SAP S/4HANA ERP implementation for end-to-end Supply Chain Management (SCM).">
+  <title>ERP Implementation in Supply Chain Management | Portfolio Case Study</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific styles; the portfolio's shared stylesheet remains unchanged. */
+    .scm-case { max-width: 1120px; margin: 0 auto; padding: 28px 30px 42px; color: #243247; line-height: 1.68; }
+    .scm-case .eyebrow { display:inline-block; padding:5px 12px; border-radius:999px; background:#e4f4f1; color:#087d74; font-size:.82rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+    .scm-case h1 { margin:14px 0 12px; color:#092f5c; font-size:clamp(1.8rem, 4vw, 2.55rem); line-height:1.2; }
+    .scm-case h2 { margin:34px 0 12px; padding-bottom:8px; border-bottom:2px solid #d9e8ef; color:#0a426e; font-size:1.45rem; }
+    .scm-case h3 { margin:0 0 8px; color:#087d74; font-size:1.05rem; }
+    .scm-case p { margin:0 0 13px; }
+    .scm-case .lead { max-width:950px; font-size:1.06rem; color:#40536a; }
+    .scm-case .meta { display:flex; flex-wrap:wrap; gap:9px; margin:18px 0 24px; }
+    .scm-case .meta span { padding:6px 10px; border:1px solid #dce6ed; border-radius:7px; background:#f7fafc; font-size:.88rem; }
+    .scm-case .highlight { margin:20px 0; padding:17px 19px; border-left:4px solid #07857d; border-radius:8px; background:#f0f8f7; }
+    .scm-case .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:16px 0; }
+    .scm-case .tile { padding:17px; border:1px solid #dce7ed; border-radius:11px; background:#fff; box-shadow:0 3px 12px rgba(16,45,75,.045); }
+    .scm-case ul, .scm-case ol { margin:8px 0 0; padding-left:22px; }
+    .scm-case li { margin:5px 0; }
+    .scm-case .architecture { margin:22px 0 26px; padding:12px; border:1px solid #d9e5ed; border-radius:12px; background:#f7fafc; }
+    .scm-case .architecture img { display:block; width:100%; height:auto; border-radius:7px; }
+    .scm-case .caption { margin:9px 3px 2px; color:#5d6b7b; font-size:.88rem; }
+    .scm-case .table-wrap { overflow-x:auto; margin:14px 0 20px; }
+    .scm-case table { width:100%; border-collapse:collapse; font-size:.94rem; }
+    .scm-case th, .scm-case td { padding:11px 12px; border:1px solid #dbe5eb; text-align:left; vertical-align:top; }
+    .scm-case th { background:#0b3767; color:#fff; }
+    .scm-case tr:nth-child(even) td { background:#f6f9fb; }
+    .scm-case .phase { border-top:4px solid #07857d; }
+    .scm-case .outcome { background:#f1f8f5; border-color:#cfe7dc; }
+    .scm-case .takeaway { padding:21px; border-radius:12px; color:#fff; background:linear-gradient(125deg,#082f5c,#087d74); }
+    .scm-case .takeaway h2 { margin-top:0; color:#fff; border-color:rgba(255,255,255,.35); }
+    .scm-case .takeaway p:last-child { margin-bottom:0; }
+    .scm-case .note { color:#64748b; font-size:.88rem; }
+    @media (max-width:700px) { .scm-case { padding:20px 15px 30px; } .scm-case .grid { grid-template-columns:1fr; } .scm-case h2 { font-size:1.25rem; } }
+  </style>
+</head>
+<body>
+  <main class="case-study-content scm-case">
+    <span class="eyebrow">Technical Capability · SAP S/4HANA</span>
+    <h1>ERP Implementation in Supply Chain Management (SCM)</h1>
+    <p class="lead">A program-management view of implementing an integrated SAP S/4HANA supply chain platform—connecting planning, procurement, manufacturing, warehousing, logistics, finance, data and analytics to support end-to-end operational visibility.</p>
+    <div class="meta">
+      <span><strong>Platform:</strong> SAP S/4HANA</span>
+      <span><strong>Scope:</strong> Plan · Source · Make · Store · Deliver</span>
+      <span><strong>Focus:</strong> ERP transformation & integration</span>
+      <span><strong>Role lens:</strong> Program / Project Manager</span>
+    </div>
+
+    <div class="highlight"><strong>Case-study framing:</strong> This is an illustrative portfolio scenario based on a common enterprise SCM transformation pattern, not a claim of a specific named customer's implementation or measured results. Actual scope, SAP editions, integrations and benefits depend on the organization's operating model.</div>
+
+    <h2>1. Introduction</h2>
+    <p>Supply Chain Management spans the movement of materials, information and products from demand planning and supplier sourcing through production, inventory, fulfillment and delivery. When these activities operate in disconnected applications or spreadsheets, organizations can face inconsistent master data, limited inventory visibility, slow planning cycles, manual reconciliation and unreliable delivery commitments.</p>
+    <p>An ERP implementation establishes a common transactional backbone and standardized business processes. In this scenario, SAP S/4HANA is the supply chain core, integrated with planning capabilities, warehouse and transportation systems, manufacturing execution, supplier/customer channels and analytics. The target is not simply a software replacement; it is a business transformation supported by process redesign, data governance, integration, change management and operational readiness.</p>
+
+    <h2>2. Core Roles of ERP in SCM</h2>
+    <div class="grid">
+      <section class="tile"><h3>Integrated process execution</h3><p>Connect purchase requisitions, purchase orders, goods receipts, production orders, stock movements, deliveries, billing and financial postings through controlled end-to-end workflows.</p></section>
+      <section class="tile"><h3>Planning and replenishment</h3><p>Use demand, supply, inventory and lead-time information to support material requirements planning (MRP), replenishment, production scheduling and exception-based decisions.</p></section>
+      <section class="tile"><h3>Master data and governance</h3><p>Maintain governed material, supplier/business partner, plant, storage location, bill of material, routing, purchasing and pricing data to improve transaction consistency.</p></section>
+      <section class="tile"><h3>Inventory and traceability</h3><p>Provide stock visibility by plant and storage location, movement history, batch/serial traceability where applicable, and controls for cycle counting and stock reconciliation.</p></section>
+      <section class="tile"><h3>Financial control</h3><p>Link procurement, inventory valuation, production consumption, goods movements and order fulfillment with relevant finance and controlling postings.</p></section>
+      <section class="tile"><h3>Performance insight</h3><p>Support operational dashboards and analytics for inventory turns, supplier performance, forecast accuracy, production attainment, fulfillment and on-time delivery.</p></section>
+    </div>
+
+    <h2>3. Key Steps in ERP Implementation</h2>
+    <ol>
+      <li><strong>Define the business case and outcomes:</strong> baseline pain points and KPIs; align executive sponsors, business owners and IT leadership on measurable objectives.</li>
+      <li><strong>Discover processes and fit-to-standard:</strong> map current and target processes across planning, sourcing, production, warehouse and delivery; document gaps, decisions and approved extensions.</li>
+      <li><strong>Design the solution and integrations:</strong> define organizational structure, module scope, security roles, reporting, interface patterns, environments and non-functional requirements.</li>
+      <li><strong>Cleanse and govern data:</strong> assign owners, profile source data, resolve duplicates, map legacy codes, define migration rules and agree reconciliation controls.</li>
+      <li><strong>Configure, build and integrate:</strong> configure standard capabilities first; develop only justified extensions and connect external systems through governed APIs, events, IDocs/EDI or middleware as appropriate.</li>
+      <li><strong>Test business scenarios end to end:</strong> execute unit, system integration, regression, performance, security, data migration and user acceptance testing with business-owned acceptance criteria.</li>
+      <li><strong>Prepare users and operations:</strong> deliver role-based training, SOPs, support procedures, cutover rehearsals, business continuity planning and service transition.</li>
+      <li><strong>Cut over, stabilize and improve:</strong> execute go-live checkpoints, validate transactions and balances, manage hypercare, track defects and transition to steady-state support.</li>
+    </ol>
+
+    <h2>4. Technology Landscape</h2>
+    <p>The target landscape combines an ERP transaction core with user channels, integration services, external operational systems, analytics and secure cloud/on-premises infrastructure. The exact product choices must be confirmed during architecture and fit-to-standard design.</p>
+    <figure class="architecture">
+      <img src="SAP_S_4HANA_SCM_Architecture.png" alt="SAP S/4HANA supply chain engineering architecture showing user channels, front-end applications, SAP integration services, ERP supply chain core, external systems, analytics, security and business outcomes" loading="lazy">
+      <figcaption class="caption">Reference architecture: end-to-end supply chain digital landscape for SAP S/4HANA. Keep <strong>SAP_S_4HANA_SCM_Architecture.png</strong> in the same GitHub repository folder as this HTML file.</figcaption>
+    </figure>
+    <div class="grid">
+      <section class="tile"><h3>Experience and access</h3><ul><li>SAP Fiori and role-based applications</li><li>Supplier, customer and logistics portals</li><li>Mobile access for warehouse and shop-floor users</li><li>Analytics and executive dashboards</li></ul></section>
+      <section class="tile"><h3>ERP and integration</h3><ul><li>SAP S/4HANA as the transactional core</li><li>SAP Integration Suite for integration flows and API management, where selected</li><li>SAP BTP for approved extensions and workflows</li><li>EDI/B2B, event-driven and partner connectivity patterns</li></ul></section>
+      <section class="tile"><h3>Operational systems</h3><ul><li>WMS and TMS</li><li>Manufacturing Execution System (MES)</li><li>Supplier and customer systems</li><li>Quality, plant equipment and IoT platforms</li></ul></section>
+      <section class="tile"><h3>Data, security and operations</h3><ul><li>SAP Datasphere and SAP Analytics Cloud, where appropriate</li><li>Identity and access management</li><li>Network security, monitoring and observability</li><li>Backup, disaster recovery and business continuity</li></ul></section>
+    </div>
+    <p class="note">Architecture note: SAP product names and deployment options evolve. Confirm current licensing, product fit, integration capabilities and reference architecture with the solution architect and SAP documentation before committing to a design.</p>
+
+    <h2>5. Key ERP and SCM Modules</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Capability / Module</th><th>Primary role in SCM</th><th>Typical processes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Planning</strong></td><td>Demand and supply balancing</td><td>Demand planning, supply planning, MRP, S&amp;OP integration and forecasting</td></tr>
+        <tr><td><strong>Procurement / MM</strong></td><td>Source and buy materials/services</td><td>Requisitions, purchase orders, supplier records, goods receipts and invoice verification</td></tr>
+        <tr><td><strong>Production Planning (PP)</strong></td><td>Plan and control manufacturing</td><td>BOMs, routings, work centers, production orders, confirmations and material consumption</td></tr>
+        <tr><td><strong>Inventory Management</strong></td><td>Control stock and movements</td><td>Goods movements, stock transfers, cycle counts, batch/serial tracking where needed</td></tr>
+        <tr><td><strong>Warehouse Management / EWM</strong></td><td>Execute warehouse operations</td><td>Inbound/outbound processing, putaway, picking, packing, staging and bin management</td></tr>
+        <tr><td><strong>Sales and Distribution / Order-to-Cash</strong></td><td>Manage customer fulfillment</td><td>Sales orders, availability checks, delivery, shipment and billing</td></tr>
+        <tr><td><strong>Transportation Management (TM)</strong></td><td>Plan and execute transportation</td><td>Freight planning, carrier selection, shipment execution and freight settlement</td></tr>
+        <tr><td><strong>Quality Management (QM)</strong></td><td>Embed quality controls</td><td>Inspection plans, quality notifications, results recording and usage decisions</td></tr>
+        <tr><td><strong>Finance and Controlling (FI/CO)</strong></td><td>Connect supply chain activity to financial control</td><td>Inventory valuation, cost allocation, production variances and financial close</td></tr>
+        <tr><td><strong>Analytics and integration</strong></td><td>Connect data and measure performance</td><td>APIs, EDI/IDocs, integration monitoring, dashboards and KPI reporting</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Module availability and product boundaries vary by SAP S/4HANA edition and licensed scope. Some capabilities may be implemented in adjacent SAP products or third-party platforms.</p>
+
+    <h2>6. Major Benefits</h2>
+    <div class="grid">
+      <section class="tile"><h3>End-to-end visibility</h3><p>Shared transactional data improves visibility into supply, stock, orders, production progress and shipment status.</p></section>
+      <section class="tile"><h3>More reliable planning</h3><p>Consistent master and transactional data supports more informed replenishment, production and inventory decisions.</p></section>
+      <section class="tile"><h3>Process standardization</h3><p>Common workflows and controls reduce local variations, duplicate effort and manual reconciliation.</p></section>
+      <section class="tile"><h3>Stronger financial traceability</h3><p>Integrated postings improve traceability from procurement and production activity to inventory and financial reporting.</p></section>
+      <section class="tile"><h3>Improved service levels</h3><p>Better order, inventory and logistics coordination can support more dependable customer commitments.</p></section>
+      <section class="tile"><h3>Scalable operations</h3><p>Governed integration and extensibility can help onboard sites, partners and capabilities without uncontrolled point-to-point growth.</p></section>
+    </div>
+
+    <h2>7. Project Implementation Lifecycle</h2>
+    <div class="grid">
+      <section class="tile phase"><h3>1. Discover and Prepare</h3><p>Charter, business case, stakeholder map, current-state assessment, scope boundaries, governance, delivery plan, RAID log and resource mobilization.</p></section>
+      <section class="tile phase"><h3>2. Explore</h3><p>Fit-to-standard workshops, process design, requirements traceability, architecture decisions, data strategy, integration inventory and sign-offs.</p></section>
+      <section class="tile phase"><h3>3. Realize</h3><p>Configuration, approved extensions, integration builds, iterative demonstrations, migration cycles, test automation and defect triage.</p></section>
+      <section class="tile phase"><h3>4. Deploy</h3><p>UAT exit, training completion, cutover rehearsal, go/no-go review, production migration, smoke tests, reconciliation and business validation.</p></section>
+      <section class="tile phase"><h3>5. Run and Optimize</h3><p>Hypercare, service transition, incident/problem management, KPI monitoring, adoption measurement, backlog prioritization and continuous improvement.</p></section>
+    </div>
+    <p>Across every phase, maintain integrated planning across workstreams, dependency management, decision logs, budget and forecast control, vendor coordination, quality gates, change control and transparent executive reporting.</p>
+
+    <h2>8. Transformation Outcome</h2>
+    <p>The intended outcome is a more connected and measurable supply chain operating model. Benefits should be validated against an agreed baseline and tracked after go-live rather than assumed from implementation alone.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Outcome area</th><th>Illustrative measure</th><th>Measurement approach</th></tr></thead>
+      <tbody>
+        <tr><td>Planning effectiveness</td><td>Forecast accuracy; schedule adherence</td><td>Compare baseline and post-go-live results by product, plant and period</td></tr>
+        <tr><td>Inventory performance</td><td>Inventory turns; stockout rate; days of inventory</td><td>Use agreed finance and inventory definitions and exclude one-off transition effects where appropriate</td></tr>
+        <tr><td>Procurement performance</td><td>Purchase-order cycle time; supplier on-time delivery</td><td>Measure from approved process timestamps and supplier delivery records</td></tr>
+        <tr><td>Manufacturing performance</td><td>Production attainment; scrap/rework rate</td><td>Compare planned versus actual output and quality results</td></tr>
+        <tr><td>Customer fulfillment</td><td>On-time-in-full (OTIF); order cycle time</td><td>Track confirmed delivery commitments against actual delivery and completeness</td></tr>
+        <tr><td>Data and technology</td><td>Migration reconciliation; interface success rate; critical defects</td><td>Use signed reconciliation reports, interface monitoring and defect trends</td></tr>
+        <tr><td>Adoption and support</td><td>Training completion; active usage; ticket trend</td><td>Combine role-based training evidence, usage analytics and service-desk data</td></tr>
+      </tbody>
+    </table></div>
+    <div class="highlight outcome"><strong>Benefits realization principle:</strong> Establish baseline values, metric owners, targets, data sources and reporting cadence during Explore. Confirm target improvements with business stakeholders; do not present illustrative KPIs as achieved project results.</div>
+
+    <section class="takeaway">
+      <h2>9. Program Management Takeaway</h2>
+      <p>Successful ERP-led SCM transformation is a business-led change program with technology as an enabler. The Program Manager must integrate process, data, architecture, delivery, people and operational readiness into one controlled plan.</p>
+      <ul>
+        <li><strong>Protect scope and standardization:</strong> prioritize fit-to-standard; govern deviations through transparent value, cost, risk and supportability decisions.</li>
+        <li><strong>Manage the critical path:</strong> track dependencies across data, integrations, environments, testing, business decisions, suppliers and site readiness.</li>
+        <li><strong>Make data a workstream:</strong> assign accountable owners and enforce quality gates for migration, reconciliation and cutover data.</li>
+        <li><strong>Prove end-to-end readiness:</strong> test real business flows across ERP and connected systems, including failures, recovery and volume conditions.</li>
+        <li><strong>Lead adoption and change:</strong> engage process owners, super users, plant/warehouse teams and suppliers early; measure readiness and usage.</li>
+        <li><strong>Own go-live governance:</strong> define entry/exit criteria, cutover command structure, go/no-go evidence, contingency options and hypercare ownership.</li>
+        <li><strong>Measure realized value:</strong> transition from project milestones to operational KPIs with named business owners and a post-go-live improvement backlog.</li>
+      </ul>
+      <p><strong>Executive message:</strong> An ERP implementation succeeds when it delivers trusted data, reliable end-to-end execution and sustained business adoption—not merely when the software goes live.</p>
+    </section>
+    <p class="note" style="margin-top:20px">Portfolio case study · Illustrative solution narrative for discussion purposes. Final architecture and scope should be validated against business requirements, SAP product documentation, licensing and enterprise standards.</p>
+  </main>
+</body>
+</html>
