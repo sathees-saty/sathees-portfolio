@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SAP S/4HANA deployment comparison: on-premises versus cloud, trade-offs, project delivery considerations, and program manager takeaways.">
+<title>SAP S/4HANA Deployment: On-Premises vs Cloud</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Self-contained article styling; shared portfolio CSS is not modified. */
+.sap-cloud-article{max-width:1120px;margin:0 auto;padding:26px 22px 48px;color:#172438;line-height:1.7}
+.sap-cloud-article *{box-sizing:border-box}
+.sap-cloud-article .hero{background:linear-gradient(120deg,#0c3558,#087e91);color:#fff;border-radius:14px;padding:30px 28px;margin-bottom:24px}
+.sap-cloud-article .eyebrow{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:#bceee7;margin:0 0 8px}
+.sap-cloud-article h1{font-size:clamp(2rem,4vw,2.8rem);line-height:1.15;margin:0 0 12px;color:#fff}
+.sap-cloud-article .hero p{font-size:1.08rem;margin:0;color:#eefaff}
+.sap-cloud-article h2{color:#123f65;margin:34px 0 12px;padding-bottom:8px;border-bottom:2px solid #d5e5ef;line-height:1.25}
+.sap-cloud-article h3{color:#087e7d;margin:18px 0 8px}
+.sap-cloud-article p{margin:10px 0 14px}
+.sap-cloud-article ul,.sap-cloud-article ol{padding-left:24px;margin:8px 0 16px}
+.sap-cloud-article li{padding-left:2px;margin:5px 0}
+.sap-cloud-article .lead{font-size:1.08rem}
+.sap-cloud-article .callout{padding:16px 18px;background:#e9f7f5;border-left:5px solid #07857d;border-radius:8px;margin:18px 0}
+.sap-cloud-article .caution{background:#fff6e7;border-left-color:#d97706}
+.sap-cloud-article figure{margin:22px 0;padding:12px;border:1px solid #c6dbe8;border-radius:12px;background:#f4f9fc}
+.sap-cloud-article figure img{display:block;width:100%;height:auto;border-radius:6px}
+.sap-cloud-article figcaption{font-size:.9rem;color:#526779;padding:9px 4px 2px}
+.sap-cloud-article .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:18px 0}
+.sap-cloud-article .card{border:1px solid #c8dbe8;border-radius:12px;overflow:hidden;background:#fff}
+.sap-cloud-article .card h3{color:#fff;margin:0;padding:14px 16px}
+.sap-cloud-article .onprem h3{background:#b77900}.sap-cloud-article .cloud h3{background:#0877b9}
+.sap-cloud-article .card-body{padding:14px 18px}
+.sap-cloud-article .card-body h4{margin:12px 0 4px;color:#173e5e}
+.sap-cloud-article .table-wrap{overflow-x:auto;border:1px solid #a9c6d9;border-radius:9px;margin:16px 0 22px}
+.sap-cloud-article table{border-collapse:collapse;width:100%;min-width:680px;background:#fff}
+.sap-cloud-article th,.sap-cloud-article td{border:1px solid #c1d6e5;padding:10px 12px;text-align:left;vertical-align:top}
+.sap-cloud-article thead th{background:#123f65;color:#fff}
+.sap-cloud-article tbody tr:nth-child(odd){background:#fff}
+.sap-cloud-article tbody tr:nth-child(even){background:#eaf4fb}
+.sap-cloud-article .phase{background:#f7fbfd;border:1px solid #cbdde8;border-radius:10px;padding:14px 16px;margin:12px 0}
+.sap-cloud-article .phase strong{color:#0b617c}
+.sap-cloud-article .takeaway{background:#102f4d;color:#fff;border-radius:12px;padding:22px;margin-top:28px}
+.sap-cloud-article .takeaway h2{color:#fff;border-color:#4e829f;margin-top:0}
+.sap-cloud-article .takeaway h3{color:#bceee7}
+.sap-cloud-article .small-note{font-size:.92rem;color:#5a6d7d}
+@media(max-width:760px){.sap-cloud-article{padding:14px 12px 32px}.sap-cloud-article .hero{padding:23px 18px}.sap-cloud-article .cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="sap-cloud-article">
+<header class="hero">
+<p class="eyebrow">SAP S/4HANA • Deployment Strategy • Program Leadership</p>
+<h1>SAP S/4HANA Deployment: On-Premises vs. Cloud</h1>
+<p>Compare control, flexibility, cost structure, operational responsibility, and time to value to select a deployment model aligned with business strategy.</p>
+</header>
+
+<p class="lead">Selecting an SAP S/4HANA deployment model is a strategic business and operating-model decision—not simply an infrastructure choice. Organizations must balance control and customization against speed, standardization, operational responsibility, compliance, and long-term cost. The right choice depends on business requirements, the SAP edition and service model, existing investments, and the organization's ability to operate and evolve the platform.</p>
+<div class="callout"><strong>Important distinction:</strong> “Cloud” is not one single deployment model. SAP S/4HANA Cloud Public Edition emphasizes standardized processes and frequent innovation; SAP S/4HANA Cloud Private Edition offers a different level of flexibility and transformation options. Service responsibilities and capabilities vary by edition and contract. Confirm current product scope and responsibilities during solution assessment.</div>
+
+<h2>1. Deployment options at a glance</h2>
+<figure>
+<img src="SAP_S_4HANA_Deployment_Comparison.png" alt="Infographic comparing SAP S/4HANA on-premises and cloud deployment options, with advantages, disadvantages, and decision criteria">
+<figcaption>Reference infographic: SAP S/4HANA deployment comparison. Keep <code>SAP_S_4HANA_Deployment_Comparison.png</code> in the same GitHub repository folder as this HTML file.</figcaption>
+</figure>
+
+<div class="cards">
+<section class="card onprem"><h3>SAP S/4HANA On-Premises</h3><div class="card-body">
+<p><strong>Definition:</strong> The SAP system is deployed in an organization's own data center or a hosting environment under an operating model where the customer retains substantial responsibility for infrastructure and technical operations.</p>
+<h4>Advantages</h4><ul>
+<li>Greater control over infrastructure, system configuration, and maintenance windows.</li>
+<li>Can support complex technical requirements and specific integration patterns, subject to the chosen architecture.</li>
+<li>May align with existing data-center investments, operating practices, or particular data-residency constraints.</li>
+<li>Organization can plan the timing of many technical changes and upgrades within supported product and maintenance policies.</li>
+</ul>
+<h4>Disadvantages and risks</h4><ul>
+<li>Requires infrastructure capacity, specialist skills, and ongoing operations capability.</li>
+<li>Hardware and environment provisioning may take longer.</li>
+<li>Customer or contracted provider typically manages more patching, upgrades, availability, backup, and disaster-recovery activities.</li>
+<li>Scaling can require additional capacity planning, procurement, and operational effort.</li>
+</ul>
+</div></section>
+<section class="card cloud"><h3>SAP S/4HANA Cloud</h3><div class="card-body">
+<p><strong>Definition:</strong> SAP S/4HANA is consumed through a cloud service model. The exact balance of standardization, extensibility, infrastructure management, and customer responsibility depends on the edition and contract.</p>
+<h4>Advantages</h4><ul>
+<li>Faster environment provisioning once service prerequisites are satisfied.</li>
+<li>Reduced customer effort for infrastructure operations in managed service models.</li>
+<li>Subscription or service-based commercial model can make costs more predictable, subject to usage and contract terms.</li>
+<li>Cloud capabilities can support scalability, availability, and regular innovation.</li>
+<li>Public Edition encourages standard processes and a clean-core approach; Private Edition may provide greater flexibility.</li>
+</ul>
+<h4>Disadvantages and risks</h4><ul>
+<li>Recurring subscription and service charges continue over the contract term.</li>
+<li>Customization and extensibility options differ by edition; requirements may need process redesign.</li>
+<li>Organizations depend on provider service commitments, maintenance windows, and release policies.</li>
+<li>Connectivity, identity, data residency, compliance, and integration design still require careful assessment.</li>
+<li>Moving to cloud does not remove the need for data migration, testing, change management, and process ownership.</li>
+</ul>
+</div></section>
+</div>
+
+<h2>2. Comparison by decision criteria</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Criteria</th><th>On-Premises</th><th>SAP S/4HANA Cloud</th></tr></thead>
+<tbody>
+<tr><td><strong>Infrastructure provisioning</strong></td><td>Procurement and setup may take longer; depends on existing capacity and hosting arrangement.</td><td>Often faster after service prerequisites and provisioning steps are complete.</td></tr>
+<tr><td><strong>Infrastructure management</strong></td><td>Customer or contracted provider has substantial responsibility.</td><td>Responsibility is shared according to cloud edition, service model, and contract.</td></tr>
+<tr><td><strong>Cost structure</strong></td><td>Infrastructure capital costs plus operating, support, and lifecycle expenses.</td><td>Typically subscription or service-based charges, plus implementation, integration, and internal operating costs.</td></tr>
+<tr><td><strong>Scalability</strong></td><td>Requires capacity planning and may require additional infrastructure.</td><td>Capacity and service scaling depend on the selected cloud offering and contractual limits.</td></tr>
+<tr><td><strong>Customization</strong></td><td>Can offer broader technical flexibility, subject to SAP supportability and clean-core considerations.</td><td>Public Edition is more standardized; Private Edition provides different extensibility and configuration options.</td></tr>
+<tr><td><strong>Maintenance and upgrades</strong></td><td>Customer/provider plans and executes more of the technical lifecycle.</td><td>More service operations may be managed by SAP; release and maintenance responsibilities vary by edition.</td></tr>
+<tr><td><strong>Innovation</strong></td><td>Adoption timing is influenced by customer upgrade planning and supported product lifecycle.</td><td>Cloud release cadence can enable regular innovation; customers must prepare for relevant changes.</td></tr>
+<tr><td><strong>Compliance and residency</strong></td><td>Can provide direct control over hosting location and controls, but compliance remains the customer's responsibility.</td><td>Assess region availability, contractual commitments, data processing, controls, and regulatory fit.</td></tr>
+<tr><td><strong>Best fit</strong></td><td>Organizations with specific control requirements, suitable existing investments, or complex supported needs.</td><td>Organizations prioritizing managed services, standardization, scalability, and a cloud-oriented operating model.</td></tr>
+</tbody></table></div>
+
+<h2>3. How to select the right deployment model</h2>
+<h3>Consider on-premises when:</h3>
+<ul>
+<li>There is a substantiated need for infrastructure-level control or a particular hosting arrangement.</li>
+<li>Existing investments and operating capabilities provide a credible total-cost and lifecycle advantage.</li>
+<li>Specific technical, integration, or regulatory requirements have been validated against the selected SAP product and support model.</li>
+<li>The organization can staff and govern system operations, security, backup, recovery, patching, and upgrades.</li>
+</ul>
+<h3>Consider SAP S/4HANA Cloud when:</h3>
+<ul>
+<li>The business values standardized processes, faster provisioning, and a managed service model.</li>
+<li>The organization is willing to redesign processes to align with standard capabilities where practical.</li>
+<li>Cloud operating responsibilities, service commitments, release cadence, and integration requirements are acceptable.</li>
+<li>The business case supports subscription economics and the organization is ready for ongoing adoption and change.</li>
+</ul>
+<div class="callout caution"><strong>Avoid deciding from license or infrastructure cost alone.</strong> Compare total cost of ownership over an agreed horizon, including implementation, conversion, integrations, data migration, testing, security, operations, training, downtime, change, upgrades, and eventual decommissioning of legacy systems.</div>
+
+<h2>4. Project implementation lifecycle</h2>
+<p>Whichever deployment model is selected, structure the implementation using the SAP Activate lifecycle. Tailor deliverables to the chosen SAP edition, transition approach, and project scope.</p>
+<div class="phase"><strong>Discover — Establish the case for change.</strong><ul><li>Clarify business outcomes, scope, constraints, current landscape, and transformation drivers.</li><li>Assess deployment options, edition fit, integration needs, regulatory constraints, and high-level total cost of ownership.</li><li>Document assumptions, decision criteria, and major risks for executive approval.</li></ul></div>
+<div class="phase"><strong>Prepare — Mobilize the program.</strong><ul><li>Set governance, workstreams, budget, integrated plan, environments, roles, and quality controls.</li><li>Confirm cloud or infrastructure prerequisites, security and identity approach, data ownership, and vendor responsibilities.</li><li>Establish change management, testing, migration, cutover, and support strategies.</li></ul></div>
+<div class="phase"><strong>Explore — Validate fit-to-standard.</strong><ul><li>Run process workshops and confirm requirements against standard SAP capabilities.</li><li>Agree configuration, approved extensions, integrations, reports, roles, and data requirements.</li><li>Record design decisions and gaps; assess the cost and risk of each proposed deviation.</li></ul></div>
+<div class="phase"><strong>Realize — Build, migrate, and test.</strong><ul><li>Configure the solution and develop approved integrations, reports, and extensions.</li><li>Execute unit, integration, regression, security, performance, and user acceptance testing as applicable.</li><li>Profile and cleanse data; conduct mock migrations, reconciliation, cutover rehearsals, and defect triage.</li></ul></div>
+<div class="phase"><strong>Deploy — Prove readiness and go live.</strong><ul><li>Verify business readiness, training, critical defect status, data reconciliation, cutover tasks, and support coverage.</li><li>Conduct go/no-go governance and execute the approved cutover plan with named decision-makers.</li><li>Monitor business-critical processes and maintain agreed recovery or contingency actions.</li></ul></div>
+<div class="phase"><strong>Run — Stabilize and realize value.</strong><ul><li>Manage hypercare, incident prioritization, service transition, and operational acceptance.</li><li>Monitor service levels, adoption, process performance, security, and benefits against baselines.</li><li>Maintain continuous improvement and manage cloud releases or technical lifecycle changes through controlled governance.</li></ul></div>
+
+<h2>5. Program Manager's responsibilities</h2>
+<ul>
+<li><strong>Strategic alignment:</strong> connect the deployment decision to business goals, operating model, risk appetite, and measurable outcomes.</li>
+<li><strong>Business case and financial control:</strong> compare total cost of ownership, implementation costs, subscription or infrastructure expenses, contingency, and legacy retirement.</li>
+<li><strong>Governance and decision-making:</strong> establish steering committee decisions, design authority, scope control, escalation paths, and accountable business owners.</li>
+<li><strong>Integrated delivery:</strong> coordinate functional, technical, data, integration, security, testing, infrastructure/cloud, change, and operations workstreams.</li>
+<li><strong>Risk and dependency management:</strong> maintain a RAID log; manage vendor commitments, connectivity, regulatory needs, environments, and critical-path dependencies.</li>
+<li><strong>Quality and readiness:</strong> enforce fit-to-standard decisions, end-to-end testing, migration reconciliation, cutover rehearsals, and evidence-based go/no-go criteria.</li>
+<li><strong>Stakeholder and change leadership:</strong> align executives, process owners, end users, regional teams, vendors, and support organizations; monitor training and adoption.</li>
+<li><strong>Benefits realization:</strong> baseline and track process KPIs, service stability, productivity, cost, and business outcomes after go-live.</li>
+</ul>
+
+<h2>6. Common risks and practical controls</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Risk</th><th>Potential impact</th><th>Recommended control</th></tr></thead>
+<tbody>
+<tr><td>Cloud/on-premises model selected without a full assessment</td><td>Unexpected cost, capability gaps, or rework.</td><td>Use documented fit-gap analysis, architecture review, and lifecycle TCO.</td></tr>
+<tr><td>Excessive customization</td><td>Higher maintenance effort and upgrade complexity.</td><td>Apply fit-to-standard, design authority, extension principles, and formal exception approval.</td></tr>
+<tr><td>Unclear shared responsibilities</td><td>Gaps in security, operations, backup, monitoring, or incident response.</td><td>Document a responsibility matrix and validate it against service contracts and operational procedures.</td></tr>
+<tr><td>Data migration defects</td><td>Incorrect balances, disrupted transactions, or delayed go-live.</td><td>Assign data owners, cleanse early, run mock loads, reconcile totals, and obtain business sign-off.</td></tr>
+<tr><td>Integration or network constraints</td><td>Failures across SAP and external systems.</td><td>Inventory interfaces, validate connectivity and identity, test end-to-end scenarios, and rehearse recovery.</td></tr>
+<tr><td>Release or upgrade readiness overlooked</td><td>Unplanned testing, business disruption, or unsupported dependencies.</td><td>Maintain release calendars, regression coverage, change impact analysis, and business communications.</td></tr>
+<tr><td>Low user adoption</td><td>Workarounds, productivity loss, and delayed benefits.</td><td>Use role-based training, super users, readiness checks, floor support, and adoption metrics.</td></tr>
+</tbody></table></div>
+
+<h2>7. Program Manager's key takeaways</h2>
+<div class="callout"><ul>
+<li><strong>Lead with business outcomes:</strong> choose the deployment model that best supports the target operating model and strategic objectives.</li>
+<li><strong>Compare total cost of ownership:</strong> include implementation, subscriptions or infrastructure, internal skills, integration, upgrades, security, training, and legacy retirement.</li>
+<li><strong>Validate the exact SAP edition:</strong> do not assume Public Cloud, Private Cloud, and on-premises have identical customization, release, or operational responsibilities.</li>
+<li><strong>Make responsibilities explicit:</strong> document what SAP, the hosting provider, implementation partner, and customer each own.</li>
+<li><strong>Protect fit-to-standard:</strong> approve deviations only when there is a clear business, regulatory, or competitive justification.</li>
+<li><strong>Build readiness into the plan:</strong> migration reconciliation, end-to-end testing, training, cutover rehearsals, and support acceptance are decision gates—not end-of-project tasks.</li>
+<li><strong>Plan for life after go-live:</strong> define service ownership, release management, continuous improvement, and benefits tracking from the start.</li>
+</ul></div>
+
+<section class="takeaway"><h2>Final takeaway</h2><p>There is no universal winner between SAP S/4HANA on-premises and cloud. On-premises may suit organizations that require greater infrastructure control and can sustain the operating model; cloud may suit organizations prioritizing managed services, standardization, and ongoing innovation. The Program Manager brings the decision to evidence: business fit, product edition, compliance, integration, readiness, lifecycle cost, and measurable value.</p><p><strong>Success is not simply moving SAP to a different hosting model. It is delivering a secure, adopted, supportable solution that improves business performance.</strong></p></section>
+<p class="small-note">Note: This article provides general program-management guidance. Confirm current SAP product capabilities, support policies, service descriptions, and contractual responsibilities with SAP and the relevant implementation or hosting partners before making a deployment decision.</p>
+</main>
+</body>
+</html>
