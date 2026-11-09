@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My SAP Journey | From S/4HANA 1511 to 2025</title>
+<link rel="stylesheet" href="style.css">
+<style>
+:root{--sap-navy:#092b45;--sap-blue:#0876b9;--sap-teal:#07857d;--ink:#203040;--muted:#607080;--line:#dce5ec;--pale:#f3f8fb}
+*{box-sizing:border-box}
+body{margin:0;background:#f4f7fa;color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.65}
+.journey{max-width:1120px;margin:0 auto;padding:34px 28px 60px}
+.hero{background:linear-gradient(120deg,#082b46,#075d83);color:#fff;padding:42px;border-radius:18px;margin-bottom:28px}
+.kicker{display:inline-block;background:rgba(7,201,184,.16);color:#65e1d4;padding:6px 12px;border-radius:5px;font-size:12px;font-weight:800;letter-spacing:1px}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.12;margin:18px 0 12px}
+.hero p{font-size:17px;color:#d9eaf4;max-width:850px;margin:0}
+.hero-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero-meta span{border:1px solid rgba(255,255,255,.25);padding:7px 12px;border-radius:20px;font-size:13px}
+.notice{background:#fff8e8;border-left:4px solid #d69a24;padding:15px 18px;border-radius:8px;margin:22px 0 30px;color:#59451c;font-size:14px}
+.section-title{color:var(--sap-navy);font-size:25px;margin:34px 0 12px}
+.intro{color:var(--muted);max-width:900px}
+.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0 30px}
+.profile-card{background:white;border:1px solid var(--line);border-radius:12px;padding:18px}
+.profile-card strong{display:block;color:var(--sap-blue);font-size:23px;margin-bottom:3px}
+.profile-card span{font-size:13px;color:var(--muted)}
+.timeline{position:relative;margin:28px 0 10px;padding-left:28px}
+.timeline:before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:3px;background:#c8dce8;border-radius:4px}
+.year-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:13px;padding:20px 22px;margin:0 0 17px;box-shadow:0 4px 14px rgba(20,55,80,.045)}
+.year-card:before{content:"";position:absolute;left:-26px;top:25px;width:13px;height:13px;border-radius:50%;background:var(--sap-teal);border:3px solid #e3f5f2}
+.year-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.year{font-size:22px;font-weight:850;color:var(--sap-navy)}
+.release{font-size:12px;font-weight:800;color:#0876b9;background:#eaf5fb;padding:5px 9px;border-radius:5px}
+.year-card h3{margin:5px 0 7px;color:#173b54;font-size:17px}
+.year-card p{margin:6px 0;color:#4e5e6b}
+.year-card ul{margin:8px 0 0;padding-left:20px;color:#4e5e6b}
+.year-card li{margin:4px 0}
+.focus{margin-top:12px;padding:10px 13px;background:#f1f8fa;border-radius:7px;font-size:13px;color:#315365}
+.focus b{color:#08776f}
+.phase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
+.phase{background:white;border:1px solid var(--line);border-radius:12px;padding:18px}
+.phase h3{margin:0 0 7px;color:var(--sap-blue);font-size:16px}
+.phase p{margin:0;color:var(--muted);font-size:14px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 24px}
+.stack span{background:#eaf2f7;color:#244d65;border:1px solid #d7e4ec;padding:6px 10px;border-radius:20px;font-size:12px;font-weight:700}
+.table-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:10px;margin:16px 0}
+table{width:100%;border-collapse:collapse;min-width:650px;font-size:13px}
+th{background:#0b5579;color:#fff;text-align:left;padding:12px}
+td{padding:11px 12px;border-bottom:1px solid #e5ebef;vertical-align:top}
+tr:nth-child(even) td{background:#f3f8fb}
+.takeaway{background:#eaf6f4;border:1px solid #c9e7e1;border-radius:12px;padding:22px;margin-top:28px}
+.takeaway h2{margin:0 0 8px;color:#075f58}
+.footer{color:#758391;font-size:12px;margin-top:25px;border-top:1px solid var(--line);padding-top:15px}
+@media(max-width:700px){.journey{padding:16px}.hero{padding:27px 22px}.profile-grid,.phase-grid{grid-template-columns:1fr}.year-card{padding:17px}.timeline{padding-left:24px}}
+</style>
+</head>
+<body>
+<main class="journey">
+<section class="hero">
+  <span class="kicker">MY PROFESSIONAL JOURNEY • SAP / ERP DELIVERY</span>
+  <h1>My SAP Journey</h1>
+  <p>From the early SAP S/4HANA digital-core era to today’s cloud, clean-core and AI-enabled transformation landscape — how my SAP/ERP delivery experience and program-management perspective have evolved.</p>
+  <div class="hero-meta">
+    <span>12+ years SAP / ERP delivery experience</span>
+    <span>20+ years overall IT experience</span>
+    <span>Project Manager → Senior Project / Program Manager</span>
+  </div>
+</section>
+
+<div class="notice"><b>How to read this timeline:</b> The release names and dates mark the SAP S/4HANA product milestones. The reflections describe how I frame SAP delivery, program leadership and capability development across this period. They should not be read as a claim that I personally implemented every listed release. Specific project-to-version mapping can be added where confirmed.</div>
+
+<h2 class="section-title">The journey at a glance</h2>
+<p class="intro">My SAP journey is not simply a list of product versions. It is a progression in how I approach enterprise transformation: understanding business outcomes, shaping scope, coordinating functional and technical teams, managing integration and data, protecting quality, and leading the organisation through deployment and adoption.</p>
+<div class="profile-grid">
+  <div class="profile-card"><strong>12+ years</strong><span>SAP / ERP delivery experience</span></div>
+  <div class="profile-card"><strong>6 years</strong><span>Project management foundation in SAP / ERP delivery</span></div>
+  <div class="profile-card"><strong>4+ years</strong><span>Senior project and program leadership progression</span></div>
+</div>
+
+<h2 class="section-title">My journey alongside the S/4HANA release milestones</h2>
+<div class="timeline">
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2015</span><span class="release">SAP S/4HANA 1511 • November 2015</span></div>
+ <h3>Building my enterprise ERP foundation</h3>
+ <p>This milestone represents the beginning of the S/4HANA era. My delivery lens at this stage is rooted in understanding how ERP supports end-to-end business operations and how project teams translate business requirements into a controlled implementation plan.</p>
+ <ul><li>Understand core enterprise processes across finance, procurement, sales, inventory and operations.</li><li>Establish scope, stakeholder ownership, requirements traceability and delivery governance.</li><li>Connect business process decisions with data, reporting and downstream integrations.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Establish a shared business view of scope, outcomes, ownership and delivery milestones.</div>
+</article>
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2016</span><span class="release">SAP S/4HANA 1610 • October 2016</span></div>
+ <h3>Connecting business processes across functions</h3>
+ <p>As the S/4HANA journey matured, I focus on the cross-functional nature of ERP delivery. A change in one process can affect finance, supply chain, sales, reporting and the customer experience.</p>
+ <ul><li>Drive workshops that bring business owners and functional teams to common decisions.</li><li>Manage dependencies across process areas and external applications.</li><li>Track decisions, gaps, risks and scope changes before they affect the critical path.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Manage the programme as one connected business transformation, not as isolated module implementations.</div>
+</article>
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2017</span><span class="release">SAP S/4HANA 1709 • September 2017</span></div>
+ <h3>Strengthening implementation planning and controls</h3>
+ <p>My project-management approach emphasises disciplined planning: a realistic integrated schedule, clear workstream ownership, resource capacity, decision governance and measurable readiness criteria.</p>
+ <ul><li>Build work breakdown structures, integrated plans, RAID logs and RACI matrices.</li><li>Coordinate functional design, technical development, integration and testing plans.</li><li>Use stage gates to make progress, risks and unresolved decisions visible.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Convert a complex implementation scope into an executable plan with accountable owners.</div>
+</article>
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2018</span><span class="release">SAP S/4HANA 1809 • September 2018</span></div>
+ <h3>Driving process standardisation and fit-to-standard thinking</h3>
+ <p>I place greater emphasis on business-led process decisions. The objective is to understand where standard processes meet business needs, where genuine differentiation is required, and what the cost of additional complexity will be.</p>
+ <ul><li>Facilitate fit-to-standard discussions and document justified process gaps.</li><li>Separate mandatory business requirements from preferences and legacy habits.</li><li>Assess customisation impact on testing, upgrades, support and long-term ownership.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Protect business value while avoiding unnecessary complexity and uncontrolled customisation.</div>
+</article>
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2019</span><span class="release">SAP S/4HANA 1909 • September 2019</span></div>
+ <h3>Managing data, integration and end-to-end quality</h3>
+ <p>Enterprise transformation depends on more than configuring business processes. Data quality, interfaces, reconciliation, security and end-to-end testing determine whether the solution works across the organisation.</p>
+ <ul><li>Coordinate data profiling, cleansing, mapping, migration rehearsals and reconciliation.</li><li>Manage interface dependencies between SAP and third-party platforms.</li><li>Plan SIT, UAT, regression, defect triage and business sign-off around real scenarios.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Treat data and integration as programme-critical workstreams with clear entry and exit criteria.</div>
+</article>
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2020</span><span class="release">SAP S/4HANA 2020 • October 2020</span></div>
+ <h3>Leading delivery through complex operating conditions</h3>
+ <p>My programme-management perspective gives strong attention to distributed delivery, transparent reporting and continuity. Teams need a common view of priorities, decisions, risks and dependencies even when delivery is spread across locations and partners.</p>
+ <ul><li>Run predictable governance across business, functional, technical, testing and vendor teams.</li><li>Use milestone-based reporting and evidence-based status rather than activity-only updates.</li><li>Keep scope, schedule, budget, quality and resource risks connected in one integrated view.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Maintain delivery control and stakeholder confidence across distributed teams.</div>
+</article>
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2021</span><span class="release">SAP S/4HANA 2021 • October 2021</span></div>
+ <h3>Expanding the transformation view to cloud and adoption</h3>
+ <p>Cloud transformation makes operating model, subscription choices, service responsibilities, security, integration and adoption important programme decisions. I approach these as business and delivery topics, not infrastructure-only decisions.</p>
+ <ul><li>Assess cloud deployment considerations, environments, connectivity and operational responsibilities.</li><li>Coordinate change impact assessment, role-based training and business readiness.</li><li>Prepare support transition, hypercare ownership and service acceptance criteria.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Plan for the organisation’s ability to operate and adopt the solution, not only to go live.</div>
+</article>
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2022</span><span class="release">SAP S/4HANA 2022 • October 2022</span></div>
+ <h3>Leading broader, multi-workstream transformation</h3>
+ <p>My progression into senior project and programme leadership brings a portfolio-level view: aligning business outcomes, multiple workstreams, delivery partners, release priorities and executive decisions.</p>
+ <ul><li>Integrate business process, application, data, infrastructure, security and change plans.</li><li>Manage cross-programme dependencies, critical decisions, risks and financial controls.</li><li>Use steering committees and workstream reviews to resolve blockers at the right level.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Align multiple teams around one transformation roadmap and a consistent definition of success.</div>
+</article>
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2023</span><span class="release">SAP S/4HANA 2023 • October 2023</span></div>
+ <h3>Emphasising clean core, extensibility and integration</h3>
+ <p>Modern SAP programmes need an intentional approach to extensions and integrations. I focus on protecting the upgrade path while enabling the business capabilities that create differentiation.</p>
+ <ul><li>Promote clean-core principles and challenge unnecessary modifications.</li><li>Evaluate extension and integration patterns, API ownership and lifecycle support.</li><li>Coordinate architecture decisions with delivery cost, operational impact and business value.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Make architecture choices visible as business trade-offs, delivery risks and long-term operating costs.</div>
+</article>
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2024</span><span class="release">SAP S/4HANA Cloud • 2024 delivery landscape</span></div>
+ <h3>Bringing together cloud ERP, platform and intelligent capabilities</h3>
+ <p>My current capability narrative brings together S/4HANA transformation, SAP BTP, SAP Integration Suite, analytics, automation and the wider enterprise application landscape. The emphasis is on selecting capabilities that solve an evidenced business problem.</p>
+ <ul><li>Connect ERP roadmaps with integration, analytics, workflow and application-extension needs.</li><li>Evaluate business cases, delivery dependencies, data readiness and adoption impacts.</li><li>Manage proof-of-concept outcomes separately from production implementation claims.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Turn technology options into prioritised business use cases, governed roadmaps and measurable outcomes.</div>
+</article>
+
+<article class="year-card">
+ <div class="year-head"><span class="year">2025</span><span class="release">SAP S/4HANA 2025 • October 8, 2025</span></div>
+ <h3>Connecting ERP transformation with AI-enabled business outcomes</h3>
+ <p>At this milestone, I position my SAP journey around business-led transformation and responsible use of AI. My work includes leading a large-scale SAP AI invoice-automation proof of concept that resulted in a working demo; it is represented as a PoC, not as a production rollout or a claim of measured savings.</p>
+ <ul><li>Identify practical AI opportunities in finance and enterprise workflows, such as invoice handling and exception support.</li><li>Define business ownership, data quality, human review, security and governance requirements.</li><li>Use a value-led roadmap with clear PoC success criteria, production-readiness gates and benefit measurement.</li></ul>
+ <div class="focus"><b>My leadership focus:</b> Bridge ERP process knowledge, programme governance and AI opportunities while keeping outcomes, controls and delivery evidence at the centre.</div>
+</article>
+</div>
+
+<h2 class="section-title">How my delivery responsibilities have evolved</h2>
+<div class="phase-grid">
+ <div class="phase"><h3>Project management foundation</h3><p>Scope definition, WBS, schedule, resource planning, budget tracking, RAID management, stakeholder communication, vendor coordination and delivery reporting.</p></div>
+ <div class="phase"><h3>Senior project leadership</h3><p>Cross-functional workstream leadership, integrated plans, dependency management, quality governance, change control, executive reporting and recovery planning.</p></div>
+ <div class="phase"><h3>Program management</h3><p>Business outcome alignment, multi-workstream governance, financial oversight, strategic decisions, portfolio dependencies, transformation roadmap and benefits tracking.</p></div>
+ <div class="phase"><h3>Business and technology bridge</h3><p>Translate business priorities into SAP process, data, integration, platform, security, testing, cutover and operating-model decisions with accountable owners.</p></div>
+</div>
+
+<h2 class="section-title">My SAP / ERP capability landscape</h2>
+<p class="intro">The following areas represent the capability domains I bring into SAP and enterprise transformation conversations.</p>
+<div class="stack">
+ <span>SAP S/4HANA</span><span>Greenfield & Brownfield</span><span>ECC-to-S/4HANA Transformation</span><span>SAP Activate</span><span>RISE with SAP</span><span>SAP BTP</span><span>SAP Integration Suite</span><span>SAP Commerce Cloud</span><span>Supply Chain</span><span>Retail</span><span>Manufacturing</span><span>B2B eCommerce</span><span>FMCG</span><span>Data Migration</span><span>Testing & Cutover</span><span>Change & Adoption</span><span>AI Proof of Concept</span>
+</div>
+
+<h2 class="section-title">My programme delivery scorecard</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Control area</th><th>What I make visible</th><th>Programme leadership question</th></tr></thead>
+<tbody>
+<tr><td>Business outcomes</td><td>Benefits, process performance, adoption and value measures</td><td>Are we delivering the business result that justified the investment?</td></tr>
+<tr><td>Scope and design</td><td>Requirements, fit-to-standard decisions, gaps and change requests</td><td>Are we controlling scope without losing essential business value?</td></tr>
+<tr><td>Schedule and dependencies</td><td>Milestones, critical path, cross-team dependencies and slippage</td><td>What threatens the next committed milestone?</td></tr>
+<tr><td>Data and integration</td><td>Migration readiness, reconciliation, interface status and failures</td><td>Can business processes operate reliably across the full landscape?</td></tr>
+<tr><td>Quality and readiness</td><td>Test coverage, defect ageing, UAT sign-off, training and cutover criteria</td><td>Is the organisation genuinely ready to go live?</td></tr>
+<tr><td>Financial and resources</td><td>Forecast, actuals, resource capacity, vendor commitments and variance</td><td>Are we managing investment and capacity responsibly?</td></tr>
+<tr><td>Operations and adoption</td><td>Support model, knowledge transfer, hypercare, service levels and usage</td><td>Can the business sustain the solution after project closure?</td></tr>
+</tbody>
+</table>
+</div>
+
+<section class="takeaway">
+ <h2>What defines my SAP journey</h2>
+ <p>My journey is defined by the evolution from managing project activities to leading business and technology transformation. I bring together enterprise process understanding, SAP / ERP delivery knowledge, structured programme governance and a practical focus on measurable business outcomes. The version timeline provides context; the real story is how I lead people, decisions, dependencies and change to make transformation deliverable.</p>
+</section>
+<div class="footer">Portfolio capability article • Personal professional narrative • Release milestones are product reference points; project-specific version exposure should be stated only where confirmed.</div>
+</main>
+</body>
+</html>
