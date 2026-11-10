@@ -4,12 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Download Center | Professional Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
+        :root {
+            --download-accent: #07857d;
+            --download-border: #dddddd;
+            --download-muted: #6b7280;
+        }
+
+        body {
+            margin: 0;
+        }
+
         .download-hero {
             text-align: center;
             padding: 65px 20px 35px;
@@ -21,9 +34,10 @@
         }
 
         .download-hero p {
-            max-width: 750px;
+            max-width: 780px;
             margin: auto;
             line-height: 1.7;
+            color: var(--download-muted);
         }
 
         .download-container {
@@ -32,14 +46,29 @@
             padding: 20px 25px 70px;
         }
 
+        .download-search {
+            max-width: 600px;
+            margin: 25px auto 45px;
+        }
+
+        .download-search input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--download-border);
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
         .download-category {
-            margin: 35px 0;
+            margin: 40px 0;
         }
 
         .download-category h2 {
-            border-bottom: 2px solid #07857d;
+            border-bottom: 2px solid var(--download-accent);
             padding-bottom: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
+            font-size: 23px;
         }
 
         .download-grid {
@@ -50,159 +79,508 @@
 
         .download-card {
             padding: 24px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--download-border);
             border-radius: 12px;
-            background: var(--card-bg, #fff);
+            background: var(--card-bg, #ffffff);
             box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .download-card i.file-icon {
-            font-size: 30px;
-            color: #07857d;
-            margin-bottom: 15px;
+        .download-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 7px 18px rgba(0,0,0,0.09);
+        }
+
+        .file-icon {
+            font-size: 32px;
+            margin-bottom: 14px;
+        }
+
+        .pdf-icon {
+            color: #d9534f;
+        }
+
+        .excel-icon {
+            color: #16834b;
+        }
+
+        .word-icon {
+            color: #2875c7;
         }
 
         .download-card h3 {
-            margin: 8px 0;
+            font-size: 18px;
+            margin: 8px 0 10px;
         }
 
         .download-card p {
             line-height: 1.6;
-            margin-bottom: 18px;
+            color: var(--download-muted);
+            min-height: 65px;
         }
 
         .download-link {
             display: inline-block;
-            padding: 10px 17px;
-            background: #07857d;
-            color: white;
+            padding: 11px 17px;
+            background: var(--download-accent);
+            color: #ffffff;
             text-decoration: none;
             border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
         }
 
         .download-link:hover {
-            opacity: 0.85;
+            opacity: 0.88;
         }
 
         .file-note {
             font-size: 12px;
-            opacity: 0.7;
-            margin-top: 10px;
+            color: var(--download-muted);
+            margin-top: 12px;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            color: var(--download-muted);
+        }
+
+        .download-footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid var(--download-border);
+            color: var(--download-muted);
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .download-hero h1 {
+                font-size: 28px;
+            }
+
+            .download-container {
+                padding: 15px 16px 45px;
+            }
+
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
 
+<!-- PAGE HEADER -->
 <section class="download-hero">
-    <h1>Professional Download Center</h1>
+
+    <h1>
+        <i class="fas fa-cloud-arrow-down"></i>
+        Professional Download Center
+    </h1>
+
     <p>
-        Access project management resources, SAP study materials,
-        implementation templates, business case studies and professional
-        reference documents.
+        Explore and download professional resources, SAP study materials,
+        project management templates, implementation guides, business
+        case studies and delivery management documents.
     </p>
+
 </section>
+
 
 <main class="download-container">
 
-    <!-- PDF DOCUMENTS -->
+    <!-- SEARCH -->
+    <div class="download-search">
+        <input
+            type="search"
+            id="downloadSearch"
+            placeholder="Search resources..."
+            oninput="filterDownloads()">
+    </div>
+
+
+    <!-- PDF RESOURCES -->
     <section class="download-category">
-        <h2><i class="fas fa-file-pdf"></i> PDF Resources</h2>
+
+        <h2>
+            <i class="fas fa-file-pdf pdf-icon"></i>
+            PDF Resources
+        </h2>
 
         <div class="download-grid">
 
             <div class="download-card">
-                <i class="fas fa-file-pdf file-icon"></i>
+                <i class="fas fa-file-pdf file-icon pdf-icon"></i>
+
                 <h3>SAP Activate Methodology</h3>
-                <p>Phases, deliverables, governance, risks and implementation lifecycle.</p>
-                <a class="download-link" href="files/PDF/SAP_Activate.pdf" download>
-                    <i class="fas fa-download"></i> Download PDF
-                </a>
+
+                <p>
+                    SAP Activate phases, deliverables, governance,
+                    risks, mitigation and implementation lifecycle.
+                </p>
+
+                <button class="download-link"
+                    onclick="downloadFile(
+                    'files/PDF/SAP_Activate.pdf',
+                    'SAP_Activate.pdf')">
+
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </button>
+
                 <div class="file-note">PDF document</div>
             </div>
 
+
             <div class="download-card">
-                <i class="fas fa-file-pdf file-icon"></i>
+                <i class="fas fa-file-pdf file-icon pdf-icon"></i>
+
                 <h3>SAP IBP Study Material</h3>
-                <p>Integrated Business Planning concepts, processes and architecture.</p>
-                <a class="download-link" href="files/PDF/SAP_IBP.pdf" download>
-                    <i class="fas fa-download"></i> Download PDF
-                </a>
+
+                <p>
+                    SAP Integrated Business Planning concepts,
+                    planning processes and architecture.
+                </p>
+
+                <button class="download-link"
+                    onclick="downloadFile(
+                    'files/PDF/SAP_IBP.pdf',
+                    'SAP_IBP.pdf')">
+
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </button>
+
                 <div class="file-note">PDF document</div>
             </div>
 
+
             <div class="download-card">
-                <i class="fas fa-file-pdf file-icon"></i>
+                <i class="fas fa-file-pdf file-icon pdf-icon"></i>
+
                 <h3>ITIL Foundation Study Guide</h3>
-                <p>IT service management concepts, practices and governance.</p>
-                <a class="download-link" href="files/PDF/ITIL_Study_Guide.pdf" download>
-                    <i class="fas fa-download"></i> Download PDF
-                </a>
+
+                <p>
+                    IT service management concepts, practices,
+                    service delivery and governance.
+                </p>
+
+                <button class="download-link"
+                    onclick="downloadFile(
+                    'files/PDF/ITIL_Study_Guide.pdf',
+                    'ITIL_Study_Guide.pdf')">
+
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </button>
+
                 <div class="file-note">PDF document</div>
             </div>
 
         </div>
     </section>
 
-    <!-- EXCEL DOCUMENTS -->
+
+    <!-- EXCEL RESOURCES -->
     <section class="download-category">
-        <h2><i class="fas fa-file-excel"></i> Excel Templates</h2>
+
+        <h2>
+            <i class="fas fa-file-excel excel-icon"></i>
+            Excel Templates
+        </h2>
 
         <div class="download-grid">
 
             <div class="download-card">
-                <i class="fas fa-file-excel file-icon"></i>
+                <i class="fas fa-file-excel file-icon excel-icon"></i>
+
                 <h3>Project RAID Tracker</h3>
-                <p>Manage risks, assumptions, issues, dependencies, owners and actions.</p>
-                <a class="download-link" href="files/Excel/Project_RAID_Tracker.xlsx" download>
-                    <i class="fas fa-download"></i> Download Excel
-                </a>
+
+                <p>
+                    Track risks, assumptions, issues, dependencies,
+                    owners, mitigation and action plans.
+                </p>
+
+                <button class="download-link"
+                    onclick="downloadFile(
+                    'files/Excel/Project_RAID_Tracker.xlsx',
+                    'Project_RAID_Tracker.xlsx')">
+
+                    <i class="fas fa-download"></i>
+                    Download Excel
+                </button>
+
                 <div class="file-note">XLSX spreadsheet</div>
             </div>
 
+
             <div class="download-card">
-                <i class="fas fa-file-excel file-icon"></i>
+                <i class="fas fa-file-excel file-icon excel-icon"></i>
+
                 <h3>Project KPI Dashboard</h3>
-                <p>Track schedule, cost, quality, productivity and delivery performance.</p>
-                <a class="download-link" href="files/Excel/Project_KPI_Dashboard.xlsx" download>
-                    <i class="fas fa-download"></i> Download Excel
-                </a>
+
+                <p>
+                    Monitor project schedule, cost, quality,
+                    productivity and delivery performance.
+                </p>
+
+                <button class="download-link"
+                    onclick="downloadFile(
+                    'files/Excel/Project_KPI_Dashboard.xlsx',
+                    'Project_KPI_Dashboard.xlsx')">
+
+                    <i class="fas fa-download"></i>
+                    Download Excel
+                </button>
+
+                <div class="file-note">XLSX spreadsheet</div>
+            </div>
+
+
+            <div class="download-card">
+                <i class="fas fa-file-excel file-icon excel-icon"></i>
+
+                <h3>Project Plan Tracker</h3>
+
+                <p>
+                    Track milestones, activities, ownership,
+                    dependencies, timelines and project progress.
+                </p>
+
+                <button class="download-link"
+                    onclick="downloadFile(
+                    'files/Excel/Project_Plan_Tracker.xlsx',
+                    'Project_Plan_Tracker.xlsx')">
+
+                    <i class="fas fa-download"></i>
+                    Download Excel
+                </button>
+
                 <div class="file-note">XLSX spreadsheet</div>
             </div>
 
         </div>
     </section>
 
-    <!-- WORD DOCUMENTS -->
+
+    <!-- WORD RESOURCES -->
     <section class="download-category">
-        <h2><i class="fas fa-file-word"></i> Word Documents</h2>
+
+        <h2>
+            <i class="fas fa-file-word word-icon"></i>
+            Word Documents
+        </h2>
 
         <div class="download-grid">
 
             <div class="download-card">
-                <i class="fas fa-file-word file-icon"></i>
+                <i class="fas fa-file-word file-icon word-icon"></i>
+
                 <h3>SAP Project Governance</h3>
-                <p>Governance structure, roles, steering committee and reporting framework.</p>
-                <a class="download-link" href="files/Word/SAP_Project_Governance.docx" download>
-                    <i class="fas fa-download"></i> Download Word
-                </a>
+
+                <p>
+                    Governance structure, roles, steering committee,
+                    PMO and reporting framework.
+                </p>
+
+                <button class="download-link"
+                    onclick="downloadFile(
+                    'files/Word/SAP_Project_Governance.docx',
+                    'SAP_Project_Governance.docx')">
+
+                    <i class="fas fa-download"></i>
+                    Download Word
+                </button>
+
                 <div class="file-note">DOCX document</div>
             </div>
 
+
             <div class="download-card">
-                <i class="fas fa-file-word file-icon"></i>
+                <i class="fas fa-file-word file-icon word-icon"></i>
+
                 <h3>SAP S/4HANA RFP</h3>
-                <p>Transformation scope, requirements, architecture and vendor evaluation.</p>
-                <a class="download-link" href="files/Word/SAP_S4HANA_RFP.docx" download>
-                    <i class="fas fa-download"></i> Download Word
-                </a>
+
+                <p>
+                    Transformation scope, requirements,
+                    architecture and vendor evaluation.
+                </p>
+
+                <button class="download-link"
+                    onclick="downloadFile(
+                    'files/Word/SAP_S4HANA_RFP.docx',
+                    'SAP_S4HANA_RFP.docx')">
+
+                    <i class="fas fa-download"></i>
+                    Download Word
+                </button>
+
+                <div class="file-note">DOCX document</div>
+            </div>
+
+
+            <div class="download-card">
+                <i class="fas fa-file-word file-icon word-icon"></i>
+
+                <h3>Project Management Study Guide</h3>
+
+                <p>
+                    Project lifecycle, planning, execution,
+                    monitoring, governance and closure.
+                </p>
+
+                <button class="download-link"
+                    onclick="downloadFile(
+                    'files/Word/Project_Management_Guide.docx',
+                    'Project_Management_Guide.docx')">
+
+                    <i class="fas fa-download"></i>
+                    Download Word
+                </button>
+
                 <div class="file-note">DOCX document</div>
             </div>
 
         </div>
     </section>
+
+
+    <!-- SEARCH EMPTY MESSAGE -->
+    <div id="noResults" class="no-results">
+        <i class="fas fa-folder-open"></i>
+        <h3>No matching resources found</h3>
+        <p>Try searching with a different keyword.</p>
+    </div>
 
 </main>
+
+
+<!-- FOOTER -->
+<footer class="download-footer">
+    Professional Resources | Project Management | SAP | ERP | Technology
+</footer>
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+// ======================================
+// CHECK FILE AVAILABILITY AND DOWNLOAD
+// ======================================
+
+async function downloadFile(url, fileName) {
+
+    const button = event.currentTarget;
+    const originalText = button.innerHTML;
+
+    button.disabled = true;
+    button.innerHTML =
+        '<i class="fas fa-spinner fa-spin"></i> Checking file...';
+
+    try {
+
+        const response = await fetch(url, {
+            method: "HEAD",
+            cache: "no-store"
+        });
+
+        if (!response.ok) {
+
+            alert(
+                "File Unavailable!\n\n" +
+                fileName +
+                " is currently not available.\n\n" +
+                "Please try again later."
+            );
+
+            return;
+        }
+
+        const link = document.createElement("a");
+
+        link.href = url;
+        link.download = fileName;
+
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+    }
+
+    catch (error) {
+
+        alert(
+            "Unable to access this file!\n\n" +
+            fileName +
+            "\n\nPlease check your internet connection " +
+            "or try again later."
+        );
+
+    }
+
+    finally {
+
+        button.disabled = false;
+        button.innerHTML = originalText;
+
+    }
+}
+
+
+// ======================================
+// SEARCH AND FILTER DOWNLOAD RESOURCES
+// ======================================
+
+function filterDownloads() {
+
+    const searchValue =
+        document.getElementById("downloadSearch")
+        .value.toLowerCase().trim();
+
+    const cards =
+        document.querySelectorAll(".download-card");
+
+    const categories =
+        document.querySelectorAll(".download-category");
+
+    let totalVisible = 0;
+
+    cards.forEach(card => {
+
+        const text = card.innerText.toLowerCase();
+
+        const match = text.includes(searchValue);
+
+        card.style.display = match ? "" : "none";
+
+        if (match) {
+            totalVisible++;
+        }
+
+    });
+
+    categories.forEach(category => {
+
+        const visibleCards =
+            category.querySelectorAll(
+                ".download-card:not([style*='display: none'])"
+            );
+
+        category.style.display =
+            visibleCards.length > 0 ? "" : "none";
+
+    });
+
+    document.getElementById("noResults").style.display =
+        totalVisible === 0 ? "block" : "none";
+
+}
+
+</script>
 
 </body>
 </html>
