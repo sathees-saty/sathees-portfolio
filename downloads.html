@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Center | Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .download-hero {
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        .download-hero h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .download-hero p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .download-container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 20px 25px 70px;
+        }
+
+        .download-category {
+            margin: 35px 0;
+        }
+
+        .download-category h2 {
+            border-bottom: 2px solid #07857d;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .download-card {
+            padding: 24px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: var(--card-bg, #fff);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        }
+
+        .download-card i.file-icon {
+            font-size: 30px;
+            color: #07857d;
+            margin-bottom: 15px;
+        }
+
+        .download-card h3 {
+            margin: 8px 0;
+        }
+
+        .download-card p {
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .download-link {
+            display: inline-block;
+            padding: 10px 17px;
+            background: #07857d;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .download-link:hover {
+            opacity: 0.85;
+        }
+
+        .file-note {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="download-hero">
+    <h1>Professional Download Center</h1>
+    <p>
+        Access project management resources, SAP study materials,
+        implementation templates, business case studies and professional
+        reference documents.
+    </p>
+</section>
+
+<main class="download-container">
+
+    <!-- PDF DOCUMENTS -->
+    <section class="download-category">
+        <h2><i class="fas fa-file-pdf"></i> PDF Resources</h2>
+
+        <div class="download-grid">
+
+            <div class="download-card">
+                <i class="fas fa-file-pdf file-icon"></i>
+                <h3>SAP Activate Methodology</h3>
+                <p>Phases, deliverables, governance, risks and implementation lifecycle.</p>
+                <a class="download-link" href="files/PDF/SAP_Activate.pdf" download>
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+                <div class="file-note">PDF document</div>
+            </div>
+
+            <div class="download-card">
+                <i class="fas fa-file-pdf file-icon"></i>
+                <h3>SAP IBP Study Material</h3>
+                <p>Integrated Business Planning concepts, processes and architecture.</p>
+                <a class="download-link" href="files/PDF/SAP_IBP.pdf" download>
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+                <div class="file-note">PDF document</div>
+            </div>
+
+            <div class="download-card">
+                <i class="fas fa-file-pdf file-icon"></i>
+                <h3>ITIL Foundation Study Guide</h3>
+                <p>IT service management concepts, practices and governance.</p>
+                <a class="download-link" href="files/PDF/ITIL_Study_Guide.pdf" download>
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+                <div class="file-note">PDF document</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXCEL DOCUMENTS -->
+    <section class="download-category">
+        <h2><i class="fas fa-file-excel"></i> Excel Templates</h2>
+
+        <div class="download-grid">
+
+            <div class="download-card">
+                <i class="fas fa-file-excel file-icon"></i>
+                <h3>Project RAID Tracker</h3>
+                <p>Manage risks, assumptions, issues, dependencies, owners and actions.</p>
+                <a class="download-link" href="files/Excel/Project_RAID_Tracker.xlsx" download>
+                    <i class="fas fa-download"></i> Download Excel
+                </a>
+                <div class="file-note">XLSX spreadsheet</div>
+            </div>
+
+            <div class="download-card">
+                <i class="fas fa-file-excel file-icon"></i>
+                <h3>Project KPI Dashboard</h3>
+                <p>Track schedule, cost, quality, productivity and delivery performance.</p>
+                <a class="download-link" href="files/Excel/Project_KPI_Dashboard.xlsx" download>
+                    <i class="fas fa-download"></i> Download Excel
+                </a>
+                <div class="file-note">XLSX spreadsheet</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WORD DOCUMENTS -->
+    <section class="download-category">
+        <h2><i class="fas fa-file-word"></i> Word Documents</h2>
+
+        <div class="download-grid">
+
+            <div class="download-card">
+                <i class="fas fa-file-word file-icon"></i>
+                <h3>SAP Project Governance</h3>
+                <p>Governance structure, roles, steering committee and reporting framework.</p>
+                <a class="download-link" href="files/Word/SAP_Project_Governance.docx" download>
+                    <i class="fas fa-download"></i> Download Word
+                </a>
+                <div class="file-note">DOCX document</div>
+            </div>
+
+            <div class="download-card">
+                <i class="fas fa-file-word file-icon"></i>
+                <h3>SAP S/4HANA RFP</h3>
+                <p>Transformation scope, requirements, architecture and vendor evaluation.</p>
+                <a class="download-link" href="files/Word/SAP_S4HANA_RFP.docx" download>
+                    <i class="fas fa-download"></i> Download Word
+                </a>
+                <div class="file-note">DOCX document</div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
